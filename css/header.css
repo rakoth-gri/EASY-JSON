@@ -1,0 +1,32 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0px;
+  background: var(--app-advantages-card-bg);
+  padding: var(--app-md-spacing);
+  border-radius: var(--app-md-spacing);
+  position: relative;
+}
+
+.header-logo {
+  padding: var(--app-md-spacing);
+  display: flex;
+  font-size: 1.5em;
+  align-items: center;
+  gap: var(--app-md-spacing);
+  color: var(--app-danger-color);
+  letter-spacing: 0.125rem;
+  font-family: "FiraCode";
+  font-weight: 700;
+}
+
+.header-menu {
+  display: flex;
+  list-style-type: none;
+  margin: 0px;
+}
+
+.menu-link.success {
+  color: var(--app-success-color);
+}

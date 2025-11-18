@@ -1,0 +1,93 @@
+.appContainer {
+  margin: 0 auto;
+  padding: var(--app-md-spacing);
+  overflow: hidden;
+}
+
+/* секции с кодом запросов и схемами ответов */
+.code {
+  margin-top: var(--app-xl-spacing);
+  display: none;
+  font-size: 1.1em;
+  background: var(--app-dark-color);
+  border-radius: var(--app-md-spacing) var(--app-md-spacing) 0px 0px;
+  position: relative;
+}
+
+.code.active {
+  display: block;
+}
+
+/* элементы списков приложения */
+
+.li {
+  margin: var(--app-lg-spacing);
+  user-select: none;
+  font-family: "FiraCode";
+  cursor: pointer;
+}
+
+.li > a:hover {
+  color: var(--app-success-color);
+  transform: scale(1.01);
+}
+
+/* параграфы секций */
+
+.section-text {
+  font-weight: 400;
+  line-height: 140%;
+  text-align: justify;
+}
+
+/* Информационные секции на странице docs.html */
+
+.app-section {
+  margin-bottom: 1.75rem;
+}
+
+/* контейнер для иконок */
+
+.icon-box {
+  padding: var(--app-md-spacing);
+  font-size: 1.5em;
+  color: var(--app-warning-color);
+  border-radius: var(--app-sm-spacing);
+  background: var(--app-features-card-bg);
+  width: max-content;
+}
+
+.burger {
+  display: none;
+}
+/* секции addEntity, deleteEntity c описанием POST/DELETE запросов */
+
+#addEntity p,
+#deleteEntity p {
+  background-color: var(--app-success-color);
+  padding: var(--app-md-spacing);
+  border-radius: var(--app-md-spacing);
+  text-align: justify;
+  word-break: all;
+  text-indent: var(--app-sm-spacing);
+}
+
+#deleteEntity p:last-of-type {
+  padding: 0px;
+  text-align: left;
+}
+
+/* Секция кнопки назад */
+.back {
+  font-size: 1.2em;
+  padding: 0px;
+}
+
+.back a {
+  width: max-content;
+}
+
+/* Секция сортировки */
+.sorting-white-list {
+  padding: 0px var(--app-sm-spacing);
+}

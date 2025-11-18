@@ -1,0 +1,73 @@
+@media (max-width: 991.98px) 
+	body 
+		font-size: 14px	
+
+	.burger 
+		display: flex	
+
+	nav 
+		position: absolute
+		top: 0%
+		right: 0px
+		background: var(--app-features-card-bg)   
+		z-index: -1
+		opacity: 0
+		transition: all 0.3s ease-out  
+		padding: var(--app-xl-spacing) 
+		border-radius: 0px var(--app-md-spacing) var(--app-md-spacing) 0px
+
+		&.active 
+			opacity: 1
+			z-index: 1 	
+
+	.header-menu 
+		flex-direction: column
+		padding: var(--app-md-spacing)	
+
+	.header-menu 
+		
+		.li 
+			font-size: 1.2em
+			font-weight: 500	
+
+			&:first-child 
+				margin-top: 1rem	
+
+	.h1 
+		font-size: 1.6rem	
+
+	.app-section 
+		padding: 0px var(--app-sm-spacing)
+	
+
+	.features-card 
+		width: 47%
+		margin: calc(6% / 4)
+		font-size: 1.1em	
+
+	.entities 
+		gap: unset	
+
+		&-card 
+			width: 47%
+			margin: calc(6% / 4)
+			padding: 0px
+			justify-self: center
+
+	.request-card 
+		
+		.material-symbols-outlined 
+			font-size: 1.25rem	
+
+		.trggr, .icon-box 
+			padding: var(--app-sm-spacing)
+
+		&-note 
+			display: block
+			padding: 0px	
+
+	.li 
+		a 
+			width: auto
+	
+
