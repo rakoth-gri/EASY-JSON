@@ -4,8 +4,6 @@ import MiniCssExtractPlugin from "mini-css-extract-plugin";
 import path from "path";
 import TerserPlugin from "terser-webpack-plugin";
 
-console.log(path.join(path.resolve(), 'src', 'main.html'));
-
 // Настройка конфига: *********
 
 const isDev = process.env.NODE_ENV === "development";
