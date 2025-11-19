@@ -1,12 +1,24 @@
 .h1 {
   font-size: 2.25rem;
   text-align: left;
-  margin: var(--app-xl-spacing) 0px;
+  margin: var(--app-md-spacing) 0px;
 }
 
 .h1.docs {
   text-align: center;
 }
+
+.description {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.description .h1 {
+  width: 100%;
+}
+
 
 .slogan {
   margin: 0px;
@@ -24,4 +36,8 @@
 
 .slogan p::after {
   content: "\201D";
+}
+
+.description .section-text {
+  margin: 0px;
 }

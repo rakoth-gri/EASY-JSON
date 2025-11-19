@@ -34,7 +34,7 @@ const REQUEST_CARD_LIST = [
     title: "получение всех сущностей по конкретному эндпоинту:",
     method: "get",
     url: (host, ep) => URLS.getEntities(host, ep),
-    cls: "btn-outline-success",
+    cls: "btn-outline-danger",
     scheme: {
       req: "req",
       res: "res",
@@ -49,7 +49,7 @@ const REQUEST_CARD_LIST = [
       "получение сущностей по конкретному эндпоинту c передачей query-параметров:",
     method: "get",
     url: (host, ep) => URLS.getEntitiesQS(host, ep),
-    cls: "btn-outline-success",
+    cls: "btn-outline-danger",
     scheme: {
       req: "req",
       res: "res",
@@ -63,7 +63,7 @@ const REQUEST_CARD_LIST = [
     title: "получение сущности с конкретным идентификатором:",
     method: "get",
     url: (host, ep) => URLS.getSingleEntity(host, ep),
-    cls: "btn-outline-success",
+    cls: "btn-outline-danger",
     scheme: {
       req: "req",
       res: "res",
@@ -77,7 +77,7 @@ const REQUEST_CARD_LIST = [
     title: "поиск всех сущностей в сооответствии с запросом:",
     method: "get",
     url: (host, ep) => URLS.getSearchedEntity(host, ep),
-    cls: "btn-outline-success",
+    cls: "btn-outline-danger",
     scheme: {
       req: "req",
       res: "res",
@@ -91,7 +91,7 @@ const REQUEST_CARD_LIST = [
     title: "добавление новой сущности:",
     method: "post",
     url: (host, ep) => URLS.addEntity(host, ep),
-    cls: "btn-outline-success",
+    cls: "btn-outline-danger",
     scheme: {
       req: "req",
       res: "res",
@@ -105,7 +105,7 @@ const REQUEST_CARD_LIST = [
     title: "удаление сущности с конкретным идентификатором:",
     method: "delete",
     url: (host, ep) => URLS.deleteEntity(host, ep),
-    cls: "btn-outline-success",
+    cls: "btn-outline-danger",
     scheme: {
       req: "req",
       res: "res",

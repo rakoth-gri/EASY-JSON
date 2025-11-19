@@ -228,7 +228,7 @@ class Components {
   ADD_ENTITY_DOCA(host, endpoint) {
     return `
         <p>
-          Добавление нового объекта имитирует создание новой сущности. В случае успеха, сервер вернет объект, содержащий поля, переданные в запросе (<a href="#addEntity" class='warning'>см. схему ответа </a>):
+          POST-запрос к API имитирует добавление новой сущности на сервер. В случае успеха, сервер вернет объект, содержащий поля, переданные в запросе (<a href="#addEntity" class='warning'>см. схему</a>):
         </p>
         <div>
             <code class='request-card-url doca'>${URLS.addEntity(
@@ -239,7 +239,8 @@ class Components {
         <div> Минимально необходимые поля для передачи в теле запроса: <ul class='white-list warning'> 
           ${getHTMLFromList(
             POST_REQUIRED_FIELDS[endpoint],
-            ({ field, type }) => `<li>${field}, ${type} </li>`)}
+            ({ field, type }) => `<li>${field}, ${type} </li>`
+          )}
           </ul>
         </div> 
         `;
@@ -247,7 +248,7 @@ class Components {
   DELETE_ENTITY_DOCA(host, endpoint) {
     return `
         <p>
-          Удаление объекта в реальности не удалит конкретную сущность на сервере, а лишь имитирует DELETE-запрос. В случае успеха, сервер вернет объект с идентификатором, содержащимся в запросе на удаление (<a href="#deleteEntity" class='warning'>см. схему ответа </a>):
+          DELETE-запрос к API имитирует удаление конкретной сущности на сервере. В случае успеха, сервер вернет объект с идентификатором, переданным в запросе (<a href="#deleteEntity" class='warning'>см. схему</a>):
         </p>
         <div>
             <code class='request-card-url doca'>${URLS.deleteEntity(
