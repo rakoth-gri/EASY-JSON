@@ -225,11 +225,11 @@ const MENU_LIST = [
 
 const DOCUMENTATION_LIST = [
   {
-    href: `/docs.html?endpoint=books`,
+    href: `./docs.html?endpoint=books`,
     text: `Документация по работе с ресурсом <strong class="warning">'books'</strong>`,
   },
   {
-    href: `/docs.html?endpoint=athletes`,
+    href: `./docs.html?endpoint=athletes`,
     text: `Документация по работе с ресурсом <strong class="warning">'athletes'</strong>`,
   },
 ];
@@ -310,7 +310,6 @@ const POST_REQUIRED_FIELDS = {
   ],
 };
 
-
 export {
   API_CONSTS,
   DOCUMENTATION_LIST,
@@ -318,8 +317,8 @@ export {
   EXAMPLES_LIST,
   FEATURES_CARD_LIST,
   MENU_LIST,
+  POST_REQUIRED_FIELDS,
   REQUEST_CARD_LIST,
   SORTING_WHITE_LIST,
   URLS,
-  POST_REQUIRED_FIELDS
 };

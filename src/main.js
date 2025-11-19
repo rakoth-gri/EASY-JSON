@@ -2,11 +2,11 @@
 import Components from "./service/Components";
 // consts:
 import {
-  FEATURES_CARD_LIST,
   API_CONSTS,
   DOCUMENTATION_LIST,
   ENTITIES_LIST,
   EXAMPLES_LIST,
+  FEATURES_CARD_LIST,
   MENU_LIST,
   REQUEST_CARD_LIST,
 } from "./models/models";
@@ -14,10 +14,9 @@ import {
 import { draw, getHTMLFromList } from "./helpers/helpers";
 // service classes:
 import Api from "./Api";
+import "./sass/style.sass";
 import { Menu } from "./service/Menu";
 import { Request } from "./service/Request";
-import "./sass/style.sass";
-import Favicon from "./icons/json.svg"
 
 const FEATURES = document.querySelector("#features");
 const ENTITIES = document.querySelector("#entities");
@@ -55,10 +54,10 @@ const DOCUMENTATION_HTML = getHTMLFromList(DOCUMENTATION_LIST, (card) =>
 draw(DOCUMENTATION, DOCUMENTATION_HTML);
 
 // ! getEntities -----------
-// (async function (endPoint, qs) {
-//   let res = await Api.getEntities(endPoint, qs);
-//   console.log(res);
-// })(API_CONSTS.BOOKS, "page=1&sort=id:asc&limit=18");
+(async function (endPoint, qs) {
+  let res = await Api.getEntities(endPoint, qs);
+  console.log(res);
+})(API_CONSTS.ATHLETES, "select=fullName,zodiacSign,instagramFollowers");
 
 // ! getSingleEntity -----------
 // (async function (endPoint, id) {
@@ -76,7 +75,12 @@ draw(DOCUMENTATION, DOCUMENTATION_HTML);
 (async function (endPoint, body) {
   let res = await Api.addEntity(endPoint, body);
   console.log(res);
-})(API_CONSTS.BOOKS, {});
+})(API_CONSTS.BOOKS, {
+  title: "foo",
+  genre: "bazz",
+  author: "X-mas",
+  publicationYear: 2000,
+});
 
 // ! deleteEntity-----------
 // (async function (endPoint, id) {

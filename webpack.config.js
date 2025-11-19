@@ -4,8 +4,6 @@ import MiniCssExtractPlugin from "mini-css-extract-plugin";
 import path from "path";
 import TerserPlugin from "terser-webpack-plugin";
 
-// Настройка конфига: *********
-
 const isDev = process.env.NODE_ENV === "development";
 const target = isDev ? "web" : "browserslist";
 const mode = isDev ? "development" : "production";
@@ -35,6 +33,7 @@ export default {
   mode,
   entry: {
     main: ["@babel/polyfill", path.resolve("src") + "/main.js"],
+    docs: ["@babel/polyfill", path.resolve("src") + "/docs.js"],
   },
   output: {
     filename: "[name].[contenthash].js",
@@ -61,7 +60,7 @@ export default {
           },
           "sass-loader",
         ],
-      },   
+      },
       {
         test: /\.m?js$/,
         exclude: /node_modules/,
@@ -84,7 +83,7 @@ export default {
       },
       {
         test: /\.(png|svg|jpg|jpeg|gif)$/i,
-        type: 'asset/resource',
+        type: "asset/resource",
         generator: {
           filename: "icons/[name][ext]",
         },
@@ -92,28 +91,36 @@ export default {
     ],
   },
   devServer: {
-    port: 3013,
-    open: true,
-    watchFiles: path.resolve("./src"),
-    client: {
-      logging: "warn",
+    static: {
+      directory: path.join(path.resolve(), 'src'),
     },
-    hot: isDev,
+    compress: true,
+    port: 3013,
+    allowedHosts: 'all',
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: path.join(path.resolve(), 'src', 'main.html'),
-      chunks: ["main"],
+      template: path.resolve("src") + "/main.html",
+      filename: "main.html",
       minify: {
         collapseWhitespace: !isDev,
       },
+      chunks: ["main"],
+    }),
+    new HtmlWebpackPlugin({
+      template: path.resolve("src") + "/docs.html",
+      filename: "docs.html",
+      minify: {
+        collapseWhitespace: !isDev,
+      },
+      chunks: ["docs"],
     }),
     new MiniCssExtractPlugin({
       filename: "[name].[contenthash].css",
     }),
   ],
   optimization: {
-    minimizer: Mimimiser(),  
+    minimizer: Mimimiser(),
   },
   resolve: {
     extensions: [".js", ".json", ".wasm", ".jsx", ".tsx", ".ts"],
