@@ -1,14 +1,14 @@
 .appContainer 
 	margin: 0 auto
-	padding: var(--app-md-spacing)
+	padding: $app-md-spacing
 	overflow: hidden
 
 .code 
-	margin-top: var(--app-xl-spacing)
+	margin-top: $app-xl-spacing
 	display: none
 	font-size: 1.1em
-	background: var(--app-dark-color)	
-	border-radius: var(--app-md-spacing) var(--app-md-spacing) 0px 0px
+	background: $app-dark-color	
+	border-radius: $app-md-spacing $app-md-spacing 0px 0px
 	position: relative
 
 	&.active 
@@ -18,7 +18,7 @@
 /* элементы списков приложения */
 
 .li 
-	margin: var(--app-lg-spacing)
+	margin: $app-lg-spacing
 	cursor: pointer
 	user-select: none
 	font-family: "FiraCode"
@@ -27,7 +27,7 @@
 .li 
 	a
 		&:hover 
-			color: var(--app-success-color)
+			color: $app-success-color
 			transform: scale(1.01)
 
 
@@ -48,11 +48,11 @@
 /* контейнер для иконок */
 
 .icon-box 
-	padding: var(--app-md-spacing)
+	padding: $app-md-spacing
 	font-size: 1.5em
-	color: var(--app-warning-color)
-	border-radius: var(--app-sm-spacing)
-	background: var(--app-features-card-bg)  
+	color: $app-warning-color
+	border-radius: $app-sm-spacing
+	background: $app-features-card-bg  
 	width: max-content
 
 
@@ -65,15 +65,15 @@
 #addEntity,
 #deleteEntity 
 	p 
-		background-color: var(--app-success-color)
-		padding: var(--app-md-spacing)
-		border-radius: var(--app-md-spacing)
+		background-color: $app-success-color
+		padding: $app-md-spacing
+		border-radius: $app-md-spacing
 		text-align: justify		
-		text-indent: var(--app-sm-spacing)
+		text-indent: $app-sm-spacing
 
 #addEntity	
 	ul	
-		padding: var(--app-md-spacing) 0px
+		padding: $app-md-spacing 0px
 
 			
 
@@ -93,7 +93,7 @@
 		width: max-content
 
 .white-list 
-	padding: 0px var(--app-sm-spacing)
+	padding: 0px $app-sm-spacing
 
 
 

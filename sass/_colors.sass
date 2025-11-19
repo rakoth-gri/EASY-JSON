@@ -1,20 +1,12 @@
-/* палитра ******/
-.danger 
-  color: var(--app-danger-color) 
+/* карта ******/
+$colors: ("danger": $app-danger-color, "warning": $app-warning-color, "purple": $app-purple-color, "success": $app-success-color, "teal": $app-teal-color, "pink": $app-pink-color, "light": $app-light-color)
 
-.warning 
-  color: var(--app-warning-color) 
+@each $key, $color in $colors 
+	.#{$key}
+		color: $color
+		
+ 
 
-.purple 
-  color: var(--app-purple-color)  
 
-.success 
-  color: var(--app-success-color)  
-
-.teal 
-  color: var(--app-teal-color) 
-
-.pink 
-  color: var(--app-pink-color)
  
 

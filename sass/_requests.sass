@@ -3,16 +3,16 @@
 	margin-bottom: 1.5rem
 
 .request-card 
-	padding: var(--app-lg-spacing)
-	margin-bottom: var(--app-xl-spacing)
-	background: var(--app-request-card-bg)
-	border-radius: var(--app-md-spacing)
+	padding: $app-lg-spacing
+	margin-bottom: $app-xl-spacing
+	background: $app-request-card-bg
+	border-radius: $app-md-spacing
 
 	&-info
 		display: flex
 		align-items: center
 		gap: 1rem
-		padding: var(--app-lg-spacing) 0px
+		padding: $app-lg-spacing 0px
 
 		.btn 
 			cursor: default
@@ -25,21 +25,21 @@
 		width: 100% 
 
 		&.doca   
-			padding: var(--app-md-spacing)  
+			padding: $app-md-spacing  
 
 	&-copy 
-		padding: var(--app-md-spacing)
+		padding: $app-md-spacing
 		display: flex
 		font-size: 1em
 		align-items: center		
-		border-radius: var(--app-md-spacing) var(--app-md-spacing) 0px 0px
+		border-radius: $app-md-spacing $app-md-spacing 0px 0px
 		cursor: pointer		
-		background-color: var(--app-darken-color)
+		background-color: $app-darken-color
 		opacity: 0.8		
 		transition: color 0.2s linear
 
 		&:hover   
-			color: var(--app-warning-color)
+			color: $app-warning-color
 			background: none
 
 		.btn
@@ -50,8 +50,8 @@
 		align-items: center
 
 	&-trigger 
-		padding: var(--app-md-spacing)
-		border: 1.5px dotted var(--app-light-color)
+		padding: $app-md-spacing
+		border: 1.5px dotted $app-light-color
 
 		&:nth-child(2n + 1) 
 			padding-left: 0px

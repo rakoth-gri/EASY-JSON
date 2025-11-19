@@ -1,7 +1,7 @@
 /* Кнопки, ссылки и триггеры */
 .btn 
-	padding: var(--app-md-spacing)
-	border-radius: var(--app-sm-spacing)
+	padding: $app-md-spacing
+	border-radius: $app-sm-spacing
 	text-transform: uppercase
 	font-weight: 700
 	cursor: pointer
@@ -10,80 +10,52 @@
 	display: flex
 
 	&.btn-danger 
-		background-color: var(--app-danger-color)
-		color: var(--app-light-color)
+		background-color: $app-danger-color
+		color: $app-light-color
 
 	&.btn-success 
-		background-color: var(--app-success-color)
-		color: var(--app-light-color)
+		background-color: $app-success-color
+		color: $app-light-color
 
 	&.btn-light 
-		background-color: var(--app-light-color)
-		color: var(--app-dark-color)
+		background-color: $app-light-color
+		color: $app-dark-color
 
 	&.btn-purple 
-		background-color: var(--app-purple-color)
-		color: var(--app-light-color)
+		background-color: $app-purple-color
+		color: $app-light-color
 
 	&.btn-warning 
-		background-color: var(--app-warning-color)
-		color: var(--app-light-color)
+		background-color: $app-warning-color
+		color: $app-light-color
 
 	&.btn-dark 
-		background-color: var(--app-dark-color)
-		color: var(--app-light-color)
+		background-color: $app-dark-color
+		color: $app-light-color
 
 	&.btn-teal 
-		background-color: var(--app-teal-color)
-		color: var(--app-light-color)
+		background-color: $app-teal-color
+		color: $app-light-color
 
 	&.btn-pink 
-		background-color: var(--app-pink-color)
-		color: var(--app-light-color)
-
-
-	&.btn-outline-danger 
-		border: 2px solid
-		color: var(--app-danger-color)
-
-	&.btn-outline-warning 
-		border: 2px solid 
-		color: var(--app-warning-color)
-
-
-	&.btn-outline-success 
-		border: 2px solid 
-		color: var(--app-success-color)
-
-
-	&.btn-outline-light 
-		border: 2px solid 
-		color: var(--app-light-color)
-
-
-	&.btn-outline-purple 
-		border: 2px solid 
-		color: var(--app-purple-color)
-
-	&.btn-outline-teal 
-		border: 2px solid 
-		color: var(--app-teal-color)
-
-
-	&.btn-outline-pink 
-		border: 2px solid 
-		color: var(--app-pink-color)
-
+		background-color: $app-pink-color
+		color: $app-light-color
 
 	&.btn-entity 
-		background: var(--app-entities-card-bg)
-		color: var(--app-light-color)		
-		padding: var(--app-lg-spacing)				
+		background: $app-entities-card-bg
+		color: $app-light-color		
+		padding: $app-lg-spacing				
 		width: 100%
 		flex-wrap: wrap
 		align-items: center
 
 		&:hover 
 			background: none
-			color: var(--app-success-color)
+			color: $app-success-color
 
+
+@each $key, $color in $colors 
+	.btn-outline-#{$key}
+		@extend .btn
+		border: 2px solid 
+		color: $color	
