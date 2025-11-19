@@ -6,6 +6,7 @@ import { REQUEST_CARD_LIST } from "./models/models";
 // utils:
 import { draw } from "./helpers/helpers";
 import "./sass/style.sass";
+import Favicon from "./icons/json.svg"
 
 const endPoint = location.search.replace(/^\?endpoint=/, "");
 

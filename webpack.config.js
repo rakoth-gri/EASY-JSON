@@ -46,7 +46,7 @@ export default {
       {
         test: /\.(css|sass|scss)$/i,
         use: [
-          mode === "production" ? MiniCssExtractPlugin.loader : "style-loader",
+          MiniCssExtractPlugin.loader,
           "css-loader",
           {
             loader: "postcss-loader",
@@ -79,7 +79,14 @@ export default {
         test: /\.(woff|woff2|eot|ttf|otf)$/i,
         type: "asset/resource",
         generator: {
-          filename: "[name][ext]",
+          filename: "fonts/[name][ext]",
+        },
+      },
+      {
+        test: /\.(png|svg|jpg|jpeg|gif)$/i,
+        type: 'asset/resource',
+        generator: {
+          filename: "icons/[name][ext]",
         },
       },
     ],

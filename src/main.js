@@ -17,6 +17,7 @@ import Api from "./Api";
 import { Menu } from "./service/Menu";
 import { Request } from "./service/Request";
 import "./sass/style.sass";
+import Favicon from "./icons/json.svg"
 
 const FEATURES = document.querySelector("#features");
 const ENTITIES = document.querySelector("#entities");
@@ -60,10 +61,10 @@ draw(DOCUMENTATION, DOCUMENTATION_HTML);
 // })(API_CONSTS.BOOKS, "page=1&sort=id:asc&limit=18");
 
 // ! getSingleEntity -----------
-(async function (endPoint, id) {
-  let res = await Api.getSingleEntity(endPoint, id);
-  console.log(res);
-})(API_CONSTS.BOOKS, "8");
+// (async function (endPoint, id) {
+//   let res = await Api.getSingleEntity(endPoint, id);
+//   console.log(res);
+// })(API_CONSTS.BOOKS, "8");
 
 // ! getSearchedEntity -----------
 // (async function (endPoint, q) {
@@ -72,10 +73,10 @@ draw(DOCUMENTATION, DOCUMENTATION_HTML);
 // })(API_CONSTS.BOOKS, "поттер");
 
 // ! addEntity -----------
-// (async function (endPoint, body) {
-//   let res = await Api.addEntity(endPoint, body);
-//   console.log(res);
-// })(API_CONSTS.BOOKS, {});
+(async function (endPoint, body) {
+  let res = await Api.addEntity(endPoint, body);
+  console.log(res);
+})(API_CONSTS.BOOKS, {});
 
 // ! deleteEntity-----------
 // (async function (endPoint, id) {
