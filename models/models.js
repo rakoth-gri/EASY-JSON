@@ -9,7 +9,7 @@ const URLS = {
   getEntities: (host, ep = "${endpoint}") =>
     `https://${host}/<span class='warning'>${ep}</span>`,
   getEntitiesQS: (host, ep = "${endpoint}") =>
-    `https://${host}/<span class='warning'>${ep}</span>?sort=<span class='warning'>\${value}</span>&page=<span class='warning'>\${value}</span>`,
+    `https://${host}/<span class='warning'>${ep}</span>?page=<span class='warning'>\${value}</span>&limit=<span class='warning'>\${value}</span>`,
   getSingleEntity: (host, ep = "${endpoint}") =>
     `https://${host}/<span class='warning'>${ep}</span>/<span class='warning'>\${id}</span>`,
   getSearchedEntity: (host, ep = "${endpoint}") =>

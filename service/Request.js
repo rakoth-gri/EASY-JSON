@@ -41,6 +41,9 @@ class Request {
     );
     draw(requestsContainer, `${html}${Components.NOTE_MAIN_PAGE()}`);
     this.codeBlocks = [...document.querySelectorAll(".code")];
+    this.codeBlocks.forEach((code) =>
+      draw(code.querySelector("pre"), Requests[code.dataset.id](this.endPoint))
+    );
   }
 
   // ! Listeners -------
@@ -56,14 +59,21 @@ class Request {
 
       const codeBlock = this.codeBlocks.find((bl) => bl.dataset.id === id);
 
-      if (!codeBlock.classList.contains("active")) {
+      if (!codeBlock.offsetHeight) {
         const html =
           scheme === "req"
             ? Requests[id](this.endPoint)
             : Responses[this.endPoint][id];
         codeBlock.querySelector("pre").innerHTML = html;
+        codeBlock.style.maxHeight =
+          codeBlock.firstElementChild.offsetHeight +
+          codeBlock.querySelector("pre").offsetHeight +
+          codeBlock.querySelector("textarea").offsetHeight +
+          "px";
+        trigger.classList.toggle("btn-outline-success");
+        return;
       }
-      codeBlock.classList.toggle("active");
+      codeBlock.style.maxHeight = "0px";
       trigger.classList.toggle("btn-outline-success");
       return;
     }
@@ -99,4 +109,3 @@ class Request {
 }
 
 export { Request };
-

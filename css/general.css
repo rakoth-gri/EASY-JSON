@@ -36,18 +36,16 @@ pre {
   margin: 0px;
   padding: var(--app-md-spacing);
   font-weight: 500;
-  line-height: 110%;
-  border-radius: var(--app-md-spacing);
-  overflow: hidden;
+  border-radius: var(--app-md-spacing); 
 }
 
 code {
   display: inline-block;
   font-weight: 300;
-  line-height: 150%;
-  font-family: 'FiraCode';
+  font-family: "FiraCode";
   overflow-y: auto;
-  max-height: 900px;
+  line-height: 150%;
+  max-height: 750px;
 }
 
 pre code {
@@ -73,12 +71,12 @@ blockquote {
 }
 
 section {
-  padding: var(--app-lg-spacing);  
+  padding: var(--app-lg-spacing);
 }
 
 ul,
 ol {
-  list-style-position: inside;  
+  list-style-position: inside;
   line-height: inherit;
   padding: var(--app-lg-spacing);
   margin: 0px;

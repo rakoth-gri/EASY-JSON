@@ -7,11 +7,14 @@
 /* секции с кодом запросов и схемами ответов */
 .code {
   margin-top: var(--app-xl-spacing);
-  display: none;
+  display: block;
   font-size: 1.1em;
   background: var(--app-dark-color);
   border-radius: var(--app-md-spacing) var(--app-md-spacing) 0px 0px;
   position: relative;
+  max-height: 0px;
+  overflow: hidden;
+  transition: 0.2s max-height linear;
 }
 
 .code.active {
@@ -64,7 +67,7 @@
 
 #addEntity p,
 #deleteEntity p {
-  background-color: var(--app-success-color);
+  border: 1px dotted var(--app-success-color);
   padding: var(--app-md-spacing);
   border-radius: var(--app-md-spacing);
   text-align: justify;
@@ -73,7 +76,6 @@
 }
 
 #deleteEntity p:last-of-type {
-  padding: 0px;
   text-align: left;
 }
 
