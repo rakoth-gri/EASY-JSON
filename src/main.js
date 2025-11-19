@@ -1,5 +1,5 @@
 // components:
-import Components from "./service/Components.js";
+import Components from "./service/Components";
 // consts:
 import {
   FEATURES_CARD_LIST,
@@ -9,13 +9,14 @@ import {
   EXAMPLES_LIST,
   MENU_LIST,
   REQUEST_CARD_LIST,
-} from "./models/models.js";
+} from "./models/models";
 // utils:
-import { draw, getHTMLFromList } from "./helpers/helpers.js";
+import { draw, getHTMLFromList } from "./helpers/helpers";
 // service classes:
-import Api from "./Api.js";
-import { Menu } from "./service/Menu.js";
-import { Request } from "./service/Request.js";
+import Api from "./Api";
+import { Menu } from "./service/Menu";
+import { Request } from "./service/Request";
+import "./sass/style.sass";
 
 const FEATURES = document.querySelector("#features");
 const ENTITIES = document.querySelector("#entities");

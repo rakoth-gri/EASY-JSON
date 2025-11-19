@@ -1,4 +1,4 @@
-import { API_CONSTS } from "./models/models.js";
+import { API_CONSTS } from "./models/models";
 
 class Api {
   static async getEntities(endpoint, qs = "") {

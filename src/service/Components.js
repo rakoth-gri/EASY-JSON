@@ -2,9 +2,9 @@ import {
   POST_REQUIRED_FIELDS,
   SORTING_WHITE_LIST,
   URLS,
-} from "../models/models.js";
+} from "../models/models";
 // helpers:
-import { getHTMLFromList } from "../helpers/helpers.js";
+import { getHTMLFromList } from "../helpers/helpers";
 
 class Components {
   //! компоненты main.html

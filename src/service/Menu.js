@@ -1,5 +1,5 @@
 // utils
-import { draw } from "../helpers/helpers.js";
+import { draw } from "../helpers/helpers";
 
 class Menu {
   constructor({ list, Component }) {

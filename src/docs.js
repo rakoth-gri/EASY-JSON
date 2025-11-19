@@ -1,10 +1,11 @@
 // service classes:
-import Components from "./service/Components.js";
-import { Request } from "./service/Request.js";
+import Components from "./service/Components";
+import { Request } from "./service/Request";
 // consts:
-import { REQUEST_CARD_LIST } from "./models/models.js";
+import { REQUEST_CARD_LIST } from "./models/models";
 // utils:
-import { draw } from "./helpers/helpers.js";
+import { draw } from "./helpers/helpers";
+import "./sass/style.sass";
 
 const endPoint = location.search.replace(/^\?endpoint=/, "");
 
