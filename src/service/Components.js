@@ -177,10 +177,10 @@ class Components {
             )} </code>
         </div> 
         <p>
-            <span class="danger">*</span> Наименования полей у разных сущностей отличаются! Для передачи корректных значений <a href="#getEntities" class='warning'>см. схему ответа </a>.
+            <span class="danger">*</span> Наименования полей у разных сущностей отличаются! Для передачи корректных значений <a href="#getEntities" class='warning'>см. схему</a>.
         </p>
         <p>
-            <span class="danger">*</span> Значением параметра <em class='warning'>"select"</em> является строка без пробелов, содержащая: название запрашиваемого поля или нескольких полей, разделенных запятыми.
+            <span class="danger">*</span> Значением параметра <em class='warning'>"select"</em> является строка, содержащая наименование требуемого поля или нескольких полей, разделенных запятыми.
         </p>
         `;
   }
@@ -206,7 +206,7 @@ class Components {
             </ul>            
         </p>
         <p>
-            <span class="danger">*</span> Переменная <span class='warning'>\${ dir }</span> принимает значения:<em class='warning'><strong> asc | desc</strong></em>.
+            <span class="danger">*</span> Переменная <span class='warning'>\${dir}</span> принимает значения:<em class='warning'><strong> asc | desc</strong></em>.
         </p>
         `;
   }

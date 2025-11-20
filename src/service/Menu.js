@@ -38,8 +38,8 @@ class Menu {
   };
 
   hilightChosenLink(links, link) {
-    links.forEach((l) => l.classList.remove("success"));
-    link.classList.add("success");
+    links.forEach((l) => l.classList.remove("active"));
+    link.classList.add("active");
   }
 
   addListenerToMenuContainer(container) {

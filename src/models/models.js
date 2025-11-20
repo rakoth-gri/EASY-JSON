@@ -130,7 +130,7 @@ const FEATURES_CARD_LIST = [
   },
   {
     icon: `<span class="material-icons-round">data_object</span>`,
-    text: `Все данные предоставлены в популярном, простом и гибком формате <abbr title="JavaScript Object Notation" class="success">JSON</abbr>!`,
+    text: `Все данные предоставлены в простом и гибком формате <abbr title="JavaScript Object Notation" class="success">JSON</abbr>!`,
     title: "JSON-данные",
   },
   {
