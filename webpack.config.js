@@ -100,8 +100,8 @@ export default {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: path.resolve("src") + "/main.html",
-      filename: "main.html",
+      template: path.resolve("src") + "/index.html",
+      filename: "index.html",
       minify: {
         collapseWhitespace: !isDev,
       },
