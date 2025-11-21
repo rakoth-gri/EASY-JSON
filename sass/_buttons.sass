@@ -1,7 +1,7 @@
 /* Кнопки, ссылки и триггеры */
 .btn 
 	padding: $app-md-spacing
-	border-radius: $app-sm-spacing
+	border-radius: $app-md-spacing
 	text-transform: uppercase
 	font-weight: 700
 	cursor: pointer
@@ -9,13 +9,13 @@
 	transition: 0.15s all linear
 	display: flex
 
-	&.btn-danger 
-		background-color: $app-danger-color
-		color: $app-light-color
-
 	&.btn-success 
 		background-color: $app-success-color
 		color: $app-light-color
+
+	&.btn-danger 
+		background-color: $app-danger-color
+		color: $app-light-color	
 
 	&.btn-light 
 		background-color: $app-light-color
@@ -57,5 +57,5 @@
 @each $key, $color in $colors 
 	.btn-outline-#{$key}
 		@extend .btn
-		border: 2px dotted 
+		border: 2px solid 
 		color: $color	

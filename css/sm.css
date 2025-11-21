@@ -1,6 +1,6 @@
 @media (max-width: 576.98px) {
   body {
-    font-size: 11px;
+    font-size: 13.5px;
     margin: 0px;
     padding: var(--app-sm-spacing);
   }
@@ -11,7 +11,7 @@
 
   .h1 {
     font-size: 1.1rem;
-    width: 100%;    
+    width: 100%;
   }
 
   h3 {
@@ -20,7 +20,7 @@
   }
 
   .features-card {
-    width: 100%;    
+    width: 100%;
     height: 180px;
     margin: var(--app-md-spacing) 0px;
   }
@@ -34,6 +34,10 @@
     margin: var(--app-md-spacing) 0px;
   }
 
+  .code {
+    font-size: 1em;
+  }
+
   .request-card {
     padding: var(--app-md-spacing);
     margin-bottom: calc(var(--app-md-spacing) * 2);
@@ -45,21 +49,27 @@
     padding: var(--app-md-spacing) 0px;
   }
 
+  .request-card-copybar {
+    padding: var(--app-sm-spacing);
+  }
+
   .request-card-url {
-    overflow: unset;
     font-size: 1.05em;
-    width: unset;
   }
 
   .request-card-url.doca {
     padding: 0px;
-    font-size: 1em;    
+    font-size: 1em;
   }
 
-  .request-card .btn,
   .icon-box,
   .back .btn {
     padding: var(--app-sm-spacing);
+  }
+
+  ol,
+  ul {
+    list-style-type: none;
   }
 
   .li {

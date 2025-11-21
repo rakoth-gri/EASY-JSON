@@ -3,6 +3,10 @@
     font-size: 14px;
   }
 
+  .back {
+    padding: var(--app-md-spacing) 0px;
+  }
+
   .burger {
     display: flex;
   }

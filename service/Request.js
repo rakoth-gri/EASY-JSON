@@ -18,7 +18,7 @@ class Request {
     this.list = list;
     this.host = host;
     this.Component = Component;
-    this.codeBlocks = null;
+    this.codeContainers = null;
     // methods
     this.templator(
       this.$appContainer,
@@ -40,8 +40,8 @@ class Request {
       Components[Component](url_card, host, endPoint)
     );
     draw(requestsContainer, `${html}${Components.NOTE_MAIN_PAGE()}`);
-    this.codeBlocks = [...document.querySelectorAll(".code")];
-    this.codeBlocks.forEach((code) =>
+    this.codeContainers = [...document.querySelectorAll(".code")];
+    this.codeContainers.forEach((code) =>
       draw(code.querySelector("pre"), Requests[code.dataset.id](this.endPoint))
     );
   }
@@ -49,7 +49,7 @@ class Request {
   // ! Listeners -------
 
   addListenerToAppContainerHandler = async (e) => {
-    if (!(e.target.closest(".trggr") || e.target.closest(".request-card-copy")))
+    if (!(e.target.closest(".trggr") || e.target.closest(".request-card-copybar")))
       return false;
 
     if (e.target.closest(".trggr")) {
@@ -57,35 +57,35 @@ class Request {
 
       const { id, scheme } = trigger.dataset;
 
-      const codeBlock = this.codeBlocks.find((bl) => bl.dataset.id === id);
+      const codeContainer = this.codeContainers.find((bl) => bl.dataset.id === id);
 
-      if (!codeBlock.offsetHeight) {
+      if (!codeContainer.offsetHeight) {
         const html =
           scheme === "req"
             ? Requests[id](this.endPoint)
             : Responses[this.endPoint][id];
-        codeBlock.querySelector("pre").innerHTML = html;
-        codeBlock.style.maxHeight =
-          codeBlock.firstElementChild.offsetHeight +
-          codeBlock.querySelector("pre").offsetHeight +
-          codeBlock.querySelector("textarea").offsetHeight +
+        codeContainer.querySelector("pre").innerHTML = html;
+        codeContainer.style.maxHeight =
+          codeContainer.firstElementChild.offsetHeight +
+          codeContainer.querySelector("pre").offsetHeight +
+          codeContainer.querySelector("textarea").offsetHeight +
           "px";
-        trigger.classList.toggle("btn-outline-success");
+        trigger.classList.toggle("btn-danger");
         return;
       }
-      codeBlock.style.maxHeight = "0px";
-      trigger.classList.toggle("btn-outline-success");
+      codeContainer.style.maxHeight = "0px";
+      trigger.classList.toggle("btn-danger");
       return;
     }
 
     const codeElem = e.target.closest(".code").querySelector("code");
     const code = codeElem.textContent;
     const textArea = e.target.closest(".code").querySelector("textarea");
+    const copyStatus = e.target.closest(".code").querySelector(".copy-status");
 
     try {
-      e.target
-        .closest(".request-card-copy")
-        .querySelector(".copy-status").textContent = "скопировано";
+      copyStatus.textContent = "скопировано";
+      copyStatus.classList.toggle("success");
       await navigator?.clipboard?.writeText(code);
     } catch (error) {
       textArea.value = code;
@@ -93,9 +93,8 @@ class Request {
       document.execCommand("copy");
     } finally {
       setTimeout(() => {
-        e.target
-          .closest(".request-card-copy")
-          .querySelector(".copy-status").textContent = "копировать";
+        copyStatus.textContent = "копировать";
+        copyStatus.classList.toggle("success");
       }, 1500);
     }
   };

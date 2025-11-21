@@ -10,9 +10,11 @@ class Menu {
     this.Component = Component;
     this.menuLinks = null;
     // Methods:
-    this.render(this.$menuContainer, this.list, this.Component)
-      .addListenerToMenuContainer(this.$menuContainer, this.list)
-      .addListenerToBurger();
+    this.render(
+      this.$menuContainer,
+      this.list,
+      this.Component
+    ).addListenerToHeader(this.$menuContainer, this.list);
   }
 
   render(menuContainer, list, Component) {
@@ -23,36 +25,33 @@ class Menu {
     return this;
   }
 
-  addListenerToMenuContainerHandler = (e) => {
-    if (!e.target.matches(".menu-link")) return;
-
-    const { id } = e.target;
-
-    document.querySelector(id).scrollIntoView({
-      behavior: "smooth",
-      block: "start",
-      inline: "nearest",
-    });
-    this.hilightChosenLink(this.menuLinks, e.target);
-    this.$mainNav.classList.toggle("active");
+  addListenerToHeaderHandler = (e) => {
+    if (e.target.closest(".burger")) {
+      this.$mainNav.classList.toggle("active");      
+    }
+    else if (!e.target.matches(".menu-link")) {
+      this.$mainNav.classList.remove("active");
+    }
+    else {
+      const { id } = e.target;
+      document.querySelector(id).scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+        inline: "nearest",
+      });
+      this.hilightChosenLink(this.menuLinks, e.target);
+      this.$mainNav.classList.toggle("active");
+    }   
   };
 
   hilightChosenLink(links, link) {
-    links.forEach((l) => l.classList.remove("success"));
-    link.classList.add("success");
+    links.forEach((l) => l.classList.remove("active"));
+    link.classList.add("active");
   }
 
-  addListenerToMenuContainer(container) {
-    container.addEventListener("click", this.addListenerToMenuContainerHandler);
+  addListenerToHeader(container) {
+    container.addEventListener("click", this.addListenerToHeaderHandler);
     return this;
-  }
-
-  addListenerToBurgerHandler = (e) => {
-    this.$mainNav.classList.toggle("active");
-  };
-
-  addListenerToBurger() {
-    this.$burger.addEventListener("click", this.addListenerToBurgerHandler);
   }
 }
 

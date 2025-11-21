@@ -28,6 +28,7 @@
   text-align: right;
   font-style: italic;
   font-weight: 300;
+  font-size: 1.2em;
 }
 
 .slogan p::before {

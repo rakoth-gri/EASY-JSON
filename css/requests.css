@@ -27,13 +27,17 @@
   font-weight: 300;
   font-size: 1.1em;
   width: 100%;
+  text-shadow: 0.3px 0.3px 1px var(--app-light-color);
+  overflow-wrap: anywhere;
 }
 
 .request-card-url.doca {
-  padding: var(--app-md-spacing);
+  padding: var(--app-sm-spacing);
+  background-color: var(app-success-color);
+  border-radius: var(--app-sm-spacing); 
 }
 
-.request-card-copy {
+.request-card-copybar {
   padding: var(--app-md-spacing);
   display: flex;
   font-size: 1em;
@@ -45,11 +49,11 @@
   transition: color 0.2s linear;
 }
 
-.request-card-copy .btn {
+.request-card-copybar .btn {
   border: none;
 }
 
-.request-card-copy:hover {
+.request-card-copybar:hover {
   color: var(--app-warning-color);
   background: none;
 }
