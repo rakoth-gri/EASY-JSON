@@ -4,7 +4,7 @@
 	overflow: hidden
 
 .code 
-	margin-top: $app-xl-spacing
+	margin-top: $app-md-spacing
 	display: block
 	font-size: 1.1em
 	background: $app-dark-color	
@@ -22,6 +22,7 @@
 	cursor: pointer
 	user-select: none
 	font-family: "FiraCode"
+	overflow-wrap: anywhere
 
 
 .li 
@@ -49,7 +50,6 @@
 
 .icon-box 
 	padding: $app-md-spacing
-	font-size: 1.5em
 	color: $app-warning-color
 	border-radius: $app-sm-spacing
 	background: $app-features-card-bg  
@@ -59,18 +59,21 @@
 .burger 
 	display: none
 
+.burger .material-icons-round 
+	font-size: 2rem
 
-/* секции addEntity, deleteEntity c описанием POST/DELETE запросов */
+/* секции addEntity, deleteEntity c описанием POST,DELETE запросов */
 
 #addEntity,
 #deleteEntity 
 	p 
-		border: 1px dotted $app-success-color
+		border: 2px dotted $app-success-color
 		padding: $app-md-spacing
-		border-radius: $app-md-spacing
+		border-radius: $app-sm-spacing
 		text-align: justify		
 		text-indent: $app-sm-spacing
 
+<<<<<<< HEAD:src/sass/_custom.sass
 #addEntity	
 	ul	
 		padding: $app-md-spacing 0px
@@ -80,16 +83,30 @@
 #deleteEntity p:last-of-type 
 	text-align: left
 	border: none
+=======
+#deleteEntity p:last-of-type, #addEntity p:last-of-type 
+	border: none
+	margin: 0px
+	padding: $app-md-spacing 0px
+>>>>>>> 8e58ff6 (2nd_commit_source_code):sass/_custom.sass
 
 
 /* Секция кнопки назад */
 
 .back 
-	font-size: 1.2em
-	padding: 0px
+	padding: 0px $app-lg-spacing	
+
+	.material-icons-round
+		font-size: 2rem 
 
 	a 
 		width: max-content
+
+		&:hover 
+			width: max-content
+			transform: scale(1.02)
+			color: $app-success-color
+
 
 .white-list 
 	padding: 0px $app-sm-spacing

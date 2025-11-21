@@ -108,9 +108,9 @@ class Components {
         ${this.URL_CARD_TRIGGERS({ id, ...scheme, ReqBtn, ResBtn })}        
         <div data-id="${id}" class="code">
           <textarea></textarea>
-          <div class="request-card-copy">
-            <button class='btn btn-outline-warning'>
-              <span class="material-icons-round">copy_all</span>
+          <div class="request-card-copybar">
+            <button class='btn btn-outline-success'>
+              <span class="material-icons-round">content_copy</span>
             </button>
             <em class='copy-status'>копировать</em> 
           </div>
@@ -129,7 +129,7 @@ class Components {
             <div class="request-card-triggers">
             <div class="request-card-trigger">
                 <button
-                    class="btn btn-outline-warning trggr"
+                    class="btn btn-success trggr"
                     data-id="${id}"
                     data-scheme="${req}"
                 >
@@ -138,7 +138,7 @@ class Components {
             </div>
             <div class="request-card-trigger ">
                 <button
-                    class="btn btn-outline-warning trggr"
+                    class="btn btn-success trggr"
                     data-id="${id}"
                     data-scheme="${res}"
                 >
@@ -206,7 +206,7 @@ class Components {
             </ul>            
         </p>
         <p>
-            <span class="danger">*</span> Переменная <span class='warning'>\${dir}</span> принимает значения:<em class='warning'><strong> asc | desc</strong></em>.
+            <span class="danger">*</span> Переменная <span class='warning'>\${ dir }</span> принимает значения:<em class='warning'> asc | desc</em>.
         </p>
         `;
   }
@@ -236,13 +236,13 @@ class Components {
               endpoint
             )}</code>
         </div>
-        <div> Минимально необходимые поля для передачи в теле запроса: <ul class='white-list warning'> 
+        <p> <span class="danger">*</span> Минимально необходимые поля для передачи в теле запроса: </p>
+        <ul class='white-list warning'> 
           ${getHTMLFromList(
             POST_REQUIRED_FIELDS[endpoint],
-            ({ field, type }) => `<li>${field}, ${type} </li>`
+            ({ field, type }) => `<li>${field}: <span class='teal'>${type}</span> </li>`
           )}
-          </ul>
-        </div> 
+          </ul>        
         `;
   }
   DELETE_ENTITY_DOCA(host, endpoint) {
@@ -256,7 +256,7 @@ class Components {
               endpoint
             )}</code>
         </div>
-        <p style='background: none;'>
+        <p>
             <span class="danger">*</span> Переменная <span class='warning'>\${id}</span> - идентификатор удаляемой сущности!            
         </p> 
         `;

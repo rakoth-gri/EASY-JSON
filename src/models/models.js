@@ -17,7 +17,7 @@ const URLS = {
   addEntity: (host, ep = "${endpoint}") =>
     `https://${host}/<span class='warning'>${ep}</span>`,
   deleteEntity: (host, ep = "${endpoint}") =>
-    `https://${host}/<span class='warning'>${ep}</span>/<span class='success'>\${id}</span>`,
+    `https://${host}/<span class='warning'>${ep}</span>/<span class='warning'>\${id}</span>`,
   getLimitedEntities: (host, ep = "${endpoint}") =>
     `https://${host}/<span class='warning'>${ep}</span>?limit=<span class='warning'>10</span>`,
   getPaginatedEntities: (host, ep = "${endpoint}") =>
@@ -34,13 +34,13 @@ const REQUEST_CARD_LIST = [
     title: "получение всех сущностей по конкретному эндпоинту:",
     method: "get",
     url: (host, ep) => URLS.getEntities(host, ep),
-    cls: "btn-outline-danger",
+    cls: "btn-success",
     scheme: {
       req: "req",
       res: "res",
     },
     ReqBtn: '<span class="material-icons-round">rocket_launch</span>',
-    ResBtn: '<span class="material-icons-round">description</span>',
+    ResBtn: '<span class="material-icons-round">data_object</span>',
     note: false,
   },
   {
@@ -49,7 +49,7 @@ const REQUEST_CARD_LIST = [
       "получение сущностей по конкретному эндпоинту c передачей query-параметров:",
     method: "get",
     url: (host, ep) => URLS.getEntitiesQS(host, ep),
-    cls: "btn-outline-danger",
+    cls: "btn-success",
     scheme: {
       req: "req",
       res: "res",
@@ -63,13 +63,13 @@ const REQUEST_CARD_LIST = [
     title: "получение сущности с конкретным идентификатором:",
     method: "get",
     url: (host, ep) => URLS.getSingleEntity(host, ep),
-    cls: "btn-outline-danger",
+    cls: "btn-success",
     scheme: {
       req: "req",
       res: "res",
     },
     ReqBtn: '<span class="material-icons-round">rocket_launch</span>',
-    ResBtn: '<span class="material-icons-round">description</span>',
+    ResBtn: '<span class="material-icons-round">data_object</span>',
     note: false,
   },
   {
@@ -77,13 +77,13 @@ const REQUEST_CARD_LIST = [
     title: "поиск всех сущностей в сооответствии с запросом:",
     method: "get",
     url: (host, ep) => URLS.getSearchedEntity(host, ep),
-    cls: "btn-outline-danger",
+    cls: "btn-success",
     scheme: {
       req: "req",
       res: "res",
     },
     ReqBtn: '<span class="material-icons-round">rocket_launch</span>',
-    ResBtn: '<span class="material-icons-round">description</span>',
+    ResBtn: '<span class="material-icons-round">data_object</span>',
     note: false,
   },
   {
@@ -91,13 +91,13 @@ const REQUEST_CARD_LIST = [
     title: "добавление новой сущности:",
     method: "post",
     url: (host, ep) => URLS.addEntity(host, ep),
-    cls: "btn-outline-danger",
+    cls: "btn-success",
     scheme: {
       req: "req",
       res: "res",
     },
     ReqBtn: '<span class="material-icons-round">rocket_launch</span>',
-    ResBtn: '<span class="material-icons-round">description</span>',
+    ResBtn: '<span class="material-icons-round">data_object</span>',
     note: true,
   },
   {
@@ -105,13 +105,13 @@ const REQUEST_CARD_LIST = [
     title: "удаление сущности с конкретным идентификатором:",
     method: "delete",
     url: (host, ep) => URLS.deleteEntity(host, ep),
-    cls: "btn-outline-danger",
+    cls: "btn-success",
     scheme: {
       req: "req",
       res: "res",
     },
     ReqBtn: '<span class="material-icons-round">rocket_launch</span>',
-    ResBtn: '<span class="material-icons-round">description</span>',
+    ResBtn: '<span class="material-icons-round">data_object</span>',
     note: false,
   },
 ];
