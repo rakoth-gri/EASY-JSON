@@ -33,7 +33,7 @@
 
 .request-card-url.doca {
   padding: var(--app-sm-spacing);
-  background-color: var(app-success-color);
+  background-color: var(--app-success-color);
   border-radius: var(--app-sm-spacing); 
 }
 

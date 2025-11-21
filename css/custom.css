@@ -74,8 +74,6 @@
   border: 2px dotted var(--app-success-color);
   padding: var(--app-md-spacing);
   border-radius: var(--app-sm-spacing);
-  text-align: justify;
-  word-break: all;
   text-indent: var(--app-sm-spacing);
 }
 
@@ -83,7 +81,7 @@
 #addEntity p:last-of-type {
   border: none;
   margin: 0px;
-  padding: var(app-md-spacing) 0px;
+  padding: var(--app-md-spacing) 0px;
 }
 
 /* Секция кнопки назад */

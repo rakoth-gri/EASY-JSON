@@ -90,7 +90,7 @@
 
   .request-card .trggr,
   .request-card .icon-box {
-    padding: var(--app-sm-spacing);
+    padding: var(--app-md-spacing);
   }
 
   .request-card-note code {

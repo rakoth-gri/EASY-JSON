@@ -89,7 +89,8 @@
 }
 
 .btn-entity {
-  background: var(--app-entities-card-bg);
+  background: var(--app-features-card-bg);
+  box-shadow: var(--app-entities-card-shadow);
   color: var(--app-light-color);
   padding: var(--app-lg-spacing);
   width: 100%;

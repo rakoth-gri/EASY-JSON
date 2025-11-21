@@ -12,13 +12,8 @@
     height: 280px;
   }
 
-  .entities-card-url {
-    font-size: 0.75rem;
-  }
-
   ol,
   ul {
-    font-size: 1em;
     padding: 0px;
   }
 

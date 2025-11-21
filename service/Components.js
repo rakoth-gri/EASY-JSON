@@ -177,7 +177,7 @@ class Components {
             )} </code>
         </div> 
         <p>
-            <span class="danger">*</span> Наименования полей у разных сущностей отличаются! Для передачи корректных значений <a href="#getEntities" class='warning'>см. схему ответа </a>.
+            <span class="danger">*</span> Наименования полей у разных сущностей отличаются! Для передачи корректных значений <a href="#getEntities" class='warning'>см. схему</a>.
         </p>
         <p>
             <span class="danger">*</span> Значением параметра <em class='warning'>"select"</em> является строка без пробелов, содержащая: название запрашиваемого поля или нескольких полей, разделенных запятыми.
@@ -206,7 +206,7 @@ class Components {
             </ul>            
         </p>
         <p>
-            <span class="danger">*</span> Переменная <span class='warning'>\${ dir }</span> принимает значения:<em class='warning'> asc | desc</em>.
+            <span class="danger">*</span> Переменная <span class='warning'>\${dir}</span> принимает значения:<em class='warning'> asc | desc</em>.
         </p>
         `;
   }
@@ -228,7 +228,7 @@ class Components {
   ADD_ENTITY_DOCA(host, endpoint) {
     return `
         <p>
-          POST-запрос к API имитирует добавление новой сущности на сервер. В случае успеха, сервер вернет объект, содержащий поля, переданные в запросе (<a href="#addEntity" class='warning'>см. схему</a>):
+          POST-запрос к API имитирует добавление новой сущности на сервер. В случае успеха, сервер вернет объект, содержащий поля, переданные в запросе <a href="#addEntity" class='warning'>(см. схему)</a>:
         </p>
         <div>
             <code class='request-card-url doca'>${URLS.addEntity(
@@ -248,7 +248,7 @@ class Components {
   DELETE_ENTITY_DOCA(host, endpoint) {
     return `
         <p>
-          DELETE-запрос к API имитирует удаление конкретной сущности на сервере. В случае успеха, сервер вернет объект с идентификатором, переданным в запросе (<a href="#deleteEntity" class='warning'>см. схему</a>):
+          DELETE-запрос к API имитирует удаление конкретной сущности на сервере. В случае успеха, сервер вернет объект с идентификатором, переданным в запросе <a href="#deleteEntity" class='warning'>(см. схему)</a>:
         </p>
         <div>
             <code class='request-card-url doca'>${URLS.deleteEntity(
