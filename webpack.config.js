@@ -126,3 +126,5 @@ export default {
     extensions: [".js", ".json", ".wasm", ".jsx", ".tsx", ".ts"],
   },
 };
+
+
