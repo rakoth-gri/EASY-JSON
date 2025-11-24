@@ -31,7 +31,7 @@ const URLS = {
 const REQUEST_CARD_LIST = [
   {
     id: "getEntities",
-    title: "получение всех сущностей по конкретному эндпоинту:",
+    title: "получение всех сущностей:",
     method: "get",
     url: (host, ep) => URLS.getEntities(host, ep),
     cls: "btn-success",
@@ -45,8 +45,7 @@ const REQUEST_CARD_LIST = [
   },
   {
     id: "getEntitiesQS",
-    title:
-      "получение сущностей по конкретному эндпоинту c передачей query-параметров:",
+    title: "получение сущностей c передачей query-параметров:",
     method: "get",
     url: (host, ep) => URLS.getEntitiesQS(host, ep),
     cls: "btn-success",
@@ -60,7 +59,7 @@ const REQUEST_CARD_LIST = [
   },
   {
     id: "getSingleEntity",
-    title: "получение сущности с конкретным идентификатором:",
+    title: "получение сущности по ID:",
     method: "get",
     url: (host, ep) => URLS.getSingleEntity(host, ep),
     cls: "btn-success",
@@ -74,7 +73,7 @@ const REQUEST_CARD_LIST = [
   },
   {
     id: "getSearchedEntity",
-    title: "поиск всех сущностей в сооответствии с запросом:",
+    title: "поиск сущностей:",
     method: "get",
     url: (host, ep) => URLS.getSearchedEntity(host, ep),
     cls: "btn-success",
@@ -102,7 +101,7 @@ const REQUEST_CARD_LIST = [
   },
   {
     id: "deleteEntity",
-    title: "удаление сущности с конкретным идентификатором:",
+    title: "удаление сущности по ID:",
     method: "delete",
     url: (host, ep) => URLS.deleteEntity(host, ep),
     cls: "btn-success",
@@ -119,29 +118,29 @@ const REQUEST_CARD_LIST = [
 const FEATURES_CARD_LIST = [
   {
     icon: `<span class="material-icons-round">http</span>`,
-    text: `Возможность запрашивать разные по тематике данные: <span class="success"> посты, книги, спорт и многое другое!</span>`,
+    text: `Возможность запрашивать разные по тематике данные: книги, спорт и многое другое!`,
     title: "Многообразие эндпоинтов",
   },
   {
     icon: `<span class="material-icons-round">model_training</span>`,
     text: `Практикуйся и изучай основные <abbr title="Create, Read, Update and Delete operations"
-    class="success">CRUD</abbr>-операции: <strong class="success">GET</strong>, <strong class="success">POST</strong>, <strong class="success">DELETE</strong>.`,
+    >CRUD</abbr>-операции: <strong">GET, POST, DELETE</strong>.`,
     title: "Практика и изучение",
   },
   {
     icon: `<span class="material-icons-round">data_object</span>`,
-    text: `Все данные предоставлены в популярном, простом и гибком формате <abbr title="JavaScript Object Notation" class="success">JSON</abbr>!`,
+    text: `Все данные предоставлены в популярном, простом и гибком формате <abbr title="JavaScript Object Notation">JSON</abbr>!`,
     title: "JSON-данные",
   },
   {
     icon: `<span class="material-icons-round">no_accounts</span>`,
-    text: `Получай доступ ко всем данным без <abbr class="success">API-ключа</abbr> и регистрации!`,
+    text: `Получай доступ ко всем данным без API-ключа и регистрации!`,
     title: "Старт без регистрации",
   },
   {
     icon: `<span class="material-icons-round">html</span>`,
-    text: `Возможность быстро протестировать внешний вид приложения, используя данные нашего <abbr class="success">API</abbr>.`,
-    title: `Тестирование <abbr class="success">UI</abbr> Вашего приложения`,
+    text: `Возможность быстро протестировать внешний вид приложения, используя данные нашего <abbr>API</abbr>.`,
+    title: `Тестирование <abbrss>UI</abbrss> Вашего приложения`,
   },
   {
     icon: `<span class="material-icons-round">monitor_heart</span>`,
@@ -226,11 +225,11 @@ const MENU_LIST = [
 const DOCUMENTATION_LIST = [
   {
     href: `/docs.html?endpoint=books`,
-    text: `Документация по работе с ресурсом <strong class="warning">'books'</strong>`,
+    text: `Документация по эндпоинту <em class="warning">'books'</em>`,
   },
   {
     href: `/docs.html?endpoint=athletes`,
-    text: `Документация по работе с ресурсом <strong class="warning">'athletes'</strong>`,
+    text: `Документация по эндпоинту  <em class="warning">'athletes'</em>`,
   },
 ];
 
@@ -310,7 +309,6 @@ const POST_REQUIRED_FIELDS = {
   ],
 };
 
-
 export {
   API_CONSTS,
   DOCUMENTATION_LIST,
@@ -318,8 +316,8 @@ export {
   EXAMPLES_LIST,
   FEATURES_CARD_LIST,
   MENU_LIST,
+  POST_REQUIRED_FIELDS,
   REQUEST_CARD_LIST,
   SORTING_WHITE_LIST,
   URLS,
-  POST_REQUIRED_FIELDS
 };

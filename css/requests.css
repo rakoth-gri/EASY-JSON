@@ -6,8 +6,14 @@
 .request-card {
   padding: var(--app-lg-spacing);
   margin-bottom: var(--app-xl-spacing);
-  background: var(--app-request-card-bg);
   border-radius: var(--app-md-spacing);
+  background: none;
+  box-shadow: var(--app-features-card-shadow);
+  height: max-content;
+}
+
+h3 {
+  margin-bottom: 0px;
 }
 
 .request-card-info {
@@ -15,6 +21,7 @@
   align-items: center;
   gap: 1rem;
   padding: var(--app-lg-spacing) 0px;
+  flex-direction: column;
 }
 
 .request-card-info .btn {
@@ -25,7 +32,7 @@
   display: inline-block;
   width: auto;
   font-weight: 300;
-  font-size: 1.1em;
+  font-size: 1.2em;
   width: 100%;
   text-shadow: 0.3px 0.3px 1px var(--app-light-color);
   overflow-wrap: anywhere;
@@ -34,7 +41,7 @@
 .request-card-url.doca {
   padding: var(--app-sm-spacing);
   background-color: var(--app-success-color);
-  border-radius: var(--app-sm-spacing); 
+  border-radius: var(--app-sm-spacing);
 }
 
 .request-card-copybar {
@@ -56,6 +63,11 @@
 .request-card-copybar:hover {
   color: var(--app-warning-color);
   background: none;
+}
+
+.request-card-note {
+  opacity: 0.85;
+  font-size: 0.95em;
 }
 
 .request-card-triggers {

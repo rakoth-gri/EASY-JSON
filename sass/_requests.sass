@@ -5,15 +5,20 @@
 .request-card 
 	padding: $app-lg-spacing
 	margin-bottom: $app-xl-spacing
-	background: $app-request-card-bg
+	background: none
 	border-radius: $app-md-spacing
+	box-shadow: $app-features-card-shadow
 	height: max-content
+
+	h3
+		margin-bottom: 0px
 
 	&-info
 		display: flex
-		align-items: center
+		align-items: start
 		gap: 1rem
 		padding: $app-lg-spacing 0px
+		flex-direction: column
 
 		.btn 
 			cursor: default
@@ -22,13 +27,13 @@
 		display: inline-block
 		width: auto
 		font-weight: 300
-		font-size: 1.1em
+		font-size: 1.2em
 		width: 100%
 		text-shadow: 0.3px 0.3px 1px $app-light-color
 		overflow-wrap: anywhere
 		
 		&.doca   
-			padding: $app-sm-spacing
+			padding: $app-md-spacing
 			background-color: $app-success-color
 			border-radius: $app-sm-spacing  
 
@@ -48,7 +53,11 @@
 			background: none
 
 		.btn
-			border: none	
+			border: none
+
+	&-note
+		opacity: 0.85
+		font-size: 0.95em 			
 
 	&-triggers 
 		display: flex

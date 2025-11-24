@@ -1,6 +1,11 @@
 * 
 	box-sizing: border-box
 	padding: 0px
+	margin: 0px
+
+	&::before, &::after
+		padding: 0px
+		margin: 0px
 
 
 body 
@@ -10,7 +15,7 @@ body
 	padding: 1rem
 	color: $app-light-color
 	letter-spacing: 1px
-	line-height: 150%	
+	line-height: 140%	
 h1,
 h2,
 h3 
@@ -23,6 +28,8 @@ h3
 h3 
 	text-align: left
 	margin: $app-md-spacing 0px
+	font-size: 1.2em
+	width: 100%
 
 
 header 
@@ -38,13 +45,11 @@ pre
 code 
 	display: inline-block
 	font-weight: 300
-	line-height: 150%
+	line-height: 140%
 	font-family: 'FiraCode'
 	overflow-y: auto
 	max-height: 750px
 	
-
-
 pre code 
 	width: 100%
 
@@ -52,15 +57,15 @@ p
 	user-select: none
 	margin: $app-md-spacing 0px
 
-dfn 
+dfn, em 
 	font-style: normal
 
-em 
-	font-style: normal
 
 blockquote 
 	margin: 0.25rem 0px
 	user-select: none
+	display: block
+	width: 100%
 
 section 
 	padding: $app-lg-spacing 
@@ -70,11 +75,7 @@ ol
 	list-style-position: inside  
 	line-height: inherit
 	padding: $app-md-spacing
-	margin: 0px
-
-li
-	&::marker
-		margin-right: 3px	
+	line-height: 140%
 
 
 a 

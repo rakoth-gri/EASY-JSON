@@ -3,6 +3,9 @@
 	padding: $app-md-spacing
 	overflow: hidden
 
+.h1
+	width: 100%	
+
 .code 
 	margin-top: $app-md-spacing
 	display: block
@@ -23,14 +26,17 @@
 	user-select: none
 	font-family: "FiraCode"
 	overflow-wrap: anywhere
-	font-size: 1.05em
+	font-size: 1.2em
+	word-break: break-all
+	letter-spacing: 0.7px	
 
-
-.li 
 	a
 		&:hover 
-			color: $app-success-color
+			color: $app-warning-color
 			transform: scale(1.01)
+
+		&:visited
+			color: $app-success-color	
 
 
 /* параграфы секций */
@@ -38,8 +44,7 @@
 .section-text   
 	font-weight: 400
 	line-height: 140%
-	text-align: justify    
-
+	text-indent: $app-sm-spacing
 
 /* Информационные секции на странице docs.html */
 
@@ -66,17 +71,15 @@
 /* секции addEntity, deleteEntity c описанием POST,DELETE запросов */
 
 #addEntity,
-#deleteEntity 
-	p 
-		border: 2px dotted $app-success-color
-		padding: $app-md-spacing
-		border-radius: $app-sm-spacing			
-		text-indent: $app-sm-spacing
+#deleteEntity
+	p
+		&:first-of-type
+			 	 
+			border: 2px dotted $app-success-color
+			padding: $app-md-spacing
+			border-radius: $app-sm-spacing			
+			text-indent: $app-sm-spacing
 
-#deleteEntity p:last-of-type, #addEntity p:last-of-type 
-	border: none
-	margin: 0px
-	padding: $app-md-spacing 0px
 
 
 /* Секция кнопки назад */
@@ -84,20 +87,27 @@
 .back 
 	padding: 0px $app-lg-spacing	
 
-	.material-icons-round
-		font-size: 2rem 
-
 	a 
 		width: max-content
 
-		&:hover 
-			width: max-content
+		&:hover 			
 			transform: scale(1.02)
 			color: $app-success-color
 
 
 .white-list 
 	padding: 0px $app-sm-spacing
+	display: flex
+	align-items: center
+	flex-wrap: wrap
+	gap: $app-sm-spacing		
+
+	.btn
+		font-size: inherit
+		color: $app-light-color
+		border: 1px dotted $app-danger-color		
+		text-transform: none
+		letter-spacing: 1px
 
 
 

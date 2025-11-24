@@ -120,7 +120,7 @@ class Components {
     </article>`;
   }
   NOTE_DOCS_PAGE = () => `
-    <p>
+    <p class="request-card-note">
         <span class="danger">*</span> В качестве <strong class="warning">body</strong> передается объект с минимально необходимым набором полей <span class='warning'>см. схему ответа </span>. 
     </p>
     `;
@@ -176,10 +176,10 @@ class Components {
               endpoint
             )} </code>
         </div> 
-        <p>
+        <p class='request-card-note'>
             <span class="danger">*</span> Наименования полей у разных сущностей отличаются! Для передачи корректных значений <a href="#getEntities" class='warning'>см. схему</a>.
         </p>
-        <p>
+        <p class='request-card-note'>
             <span class="danger">*</span> Значением параметра <em class='warning'>"select"</em> является строка без пробелов, содержащая: название запрашиваемого поля или нескольких полей, разделенных запятыми.
         </p>
         `;
@@ -197,15 +197,16 @@ class Components {
               endpoint
             )}</code>
         </div> 
-        <p>
+        <p class='request-card-note'>
             <span class="danger">*</span> Переменная <span class='warning'>\${field}</span> принимает следующие значения:
-            <ul class='warning white-list'>${getHTMLFromList(
+            <ul class='white-list'>${getHTMLFromList(
               SORTING_WHITE_LIST[endpoint],
-              (sortValue) => `<li> ${sortValue} </li>`
+              (sortValue) =>
+                `<li class=' btn'> ${sortValue} </li>`
             )}
             </ul>            
         </p>
-        <p>
+        <p class='request-card-note'>
             <span class="danger">*</span> Переменная <span class='warning'>\${dir}</span> принимает значения:<em class='warning'> asc | desc</em>.
         </p>
         `;
@@ -236,11 +237,13 @@ class Components {
               endpoint
             )}</code>
         </div>
-        <p> <span class="danger">*</span> Минимально необходимые поля для передачи в теле запроса: </p>
-        <ul class='white-list warning'> 
+        <p class='request-card-note'> <span class="danger">*</span> Минимально необходимые поля для передачи в теле запроса: 
+        </p>
+        <ul class='white-list'> 
           ${getHTMLFromList(
             POST_REQUIRED_FIELDS[endpoint],
-            ({ field, type }) => `<li>${field}: <span class='teal'>${type}</span> </li>`
+            ({ field, type }) =>
+              `<li class='btn'>${field}:  <span class='teal'>${type}</span></li>`
           )}
           </ul>        
         `;
@@ -256,7 +259,7 @@ class Components {
               endpoint
             )}</code>
         </div>
-        <p>
+        <p class='request-card-note'>
             <span class="danger">*</span> Переменная <span class='warning'>\${id}</span> - идентификатор удаляемой сущности!            
         </p> 
         `;
