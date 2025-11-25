@@ -39,7 +39,7 @@ h3 {
 }
 
 .request-card-url.doca {
-  padding: var(--app-sm-spacing);
+  padding: var(--app-md-spacing);
   background-color: var(--app-success-color);
   border-radius: var(--app-sm-spacing);
 }
@@ -66,8 +66,9 @@ h3 {
 }
 
 .request-card-note {
-  opacity: 0.85;
+  opacity: 0.8;
   font-size: 0.95em;
+  margin: var(--app-md-spacing 0px);	
 }
 
 .request-card-triggers {

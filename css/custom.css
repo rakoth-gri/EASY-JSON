@@ -8,6 +8,11 @@
   width: 100%;
 }
 
+.h2 {
+  width: 100%;
+  margin: var(--app-md-spacing 0px);
+}
+
 /* секции с кодом запросов и схемами ответов */
 .code {
   margin-top: var(--app-md-spacing);
@@ -53,6 +58,7 @@
   font-weight: 400;
   line-height: 140%;
   text-indent: var(--app-sm-spacing);
+  margin: var(--app-md-spacing 0px);
 }
 
 /* Информационные секции на странице docs.html */
@@ -86,6 +92,7 @@
   padding: var(--app-md-spacing);
   border-radius: var(--app-sm-spacing);
   text-indent: var(--app-sm-spacing);
+  margin: var(--app-md-spacing 0px);
 }
 
 /* Секция кнопки назад */

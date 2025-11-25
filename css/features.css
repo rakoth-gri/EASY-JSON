@@ -9,8 +9,7 @@
 .features-card {
   width: 31%;
   padding: var(--app-lg-spacing);
-  border-radius: var(--app-md-spacing);
-  border: 2px solid var(--app-primary-color);
+  border-radius: var(--app-md-spacing);  
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -41,10 +40,6 @@
   font-size: 1.1em;
 }
 
-.features-title {
-  width: 100%;
-  margin: var(--app-md-spacing) 0px;
-}
 
 .features-card-icon span {
   font-size: 1.25em;

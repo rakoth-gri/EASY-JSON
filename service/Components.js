@@ -40,18 +40,18 @@ class Components {
   NOTE_MAIN_PAGE = () => `
     <div>
         <p class="request-card-note">
-            <span class="danger">* </span> Переменная 
+            <span class="danger">&#10071;</span>Переменная 
             <em class="warning"> \${endpoint}</em> представляет
             доступные в API ресурсы:<span class="warning">
             'athletes', 'books'</span>.
         </p>
         <p class="request-card-note">
-            <span class="danger">** </span>Переменная
+            <span class="danger">&#10071;</span>Переменная
             <em class="warning">\${value}</em> представляет значения
             передаваемых пользователем query-параметров.
         </p>
         <p class="request-card-note">
-            <span class="danger">*** </span>Переменная
+            <span class="danger">&#10071;</span>Переменная
             <em class="warning">\${id}</em> представляет
             идентификатор запрашиваемого ресурса.
         </p>
@@ -121,7 +121,7 @@ class Components {
   }
   NOTE_DOCS_PAGE = () => `
     <p class="request-card-note">
-        <span class="danger">*</span> В качестве <strong class="warning">body</strong> передается объект с минимально необходимым набором полей <span class='warning'>см. схему ответа </span>. 
+        <span class="danger">&#10071;</span>В качестве <strong class="warning">body</strong> передается объект с минимально необходимым набором полей <span class='warning'>см. схему ответа </span>. 
     </p>
     `;
   URL_CARD_TRIGGERS({ id, req, res, ReqBtn, ResBtn }) {
@@ -177,10 +177,10 @@ class Components {
             )} </code>
         </div> 
         <p class='request-card-note'>
-            <span class="danger">*</span> Наименования полей у разных сущностей отличаются! Для передачи корректных значений <a href="#getEntities" class='warning'>см. схему</a>.
+            <span class="danger">&#10071;</span>Наименования полей у разных сущностей отличаются! Для передачи корректных значений <a href="#getEntities" class='warning'>см. схему</a>.
         </p>
         <p class='request-card-note'>
-            <span class="danger">*</span> Значением параметра <em class='warning'>"select"</em> является строка без пробелов, содержащая: название запрашиваемого поля или нескольких полей, разделенных запятыми.
+            <span class="danger">&#10071;</span>Значением параметра <em class='warning'>"select"</em> является строка без пробелов, содержащая: название запрашиваемого поля или нескольких полей, разделенных запятыми.
         </p>
         `;
   }
@@ -198,7 +198,7 @@ class Components {
             )}</code>
         </div> 
         <p class='request-card-note'>
-            <span class="danger">*</span> Переменная <span class='warning'>\${field}</span> принимает следующие значения:
+            <span class="danger">&#10071;</span>Переменная <span class='warning'>\${field}</span> принимает следующие значения:
             <ul class='white-list'>${getHTMLFromList(
               SORTING_WHITE_LIST[endpoint],
               (sortValue) =>
@@ -207,7 +207,7 @@ class Components {
             </ul>            
         </p>
         <p class='request-card-note'>
-            <span class="danger">*</span> Переменная <span class='warning'>\${dir}</span> принимает значения:<em class='warning'> asc | desc</em>.
+            <span class="danger">&#10071;</span>Переменная <span class='warning'>\${dir}</span> принимает значения:<em class='warning'> asc | desc</em>.
         </p>
         `;
   }
@@ -237,7 +237,7 @@ class Components {
               endpoint
             )}</code>
         </div>
-        <p class='request-card-note'> <span class="danger">*</span> Минимально необходимые поля для передачи в теле запроса: 
+        <p class='request-card-note'><span class="danger">&#10071;</span>Минимально необходимые поля для передачи в теле запроса: 
         </p>
         <ul class='white-list'> 
           ${getHTMLFromList(
@@ -260,7 +260,7 @@ class Components {
             )}</code>
         </div>
         <p class='request-card-note'>
-            <span class="danger">*</span> Переменная <span class='warning'>\${id}</span> - идентификатор удаляемой сущности!            
+            <span class="danger">&#10071;</span>Переменная <span class='warning'>\${id}</span> - идентификатор удаляемой сущности!            
         </p> 
         `;
   }

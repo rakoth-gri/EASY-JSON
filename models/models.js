@@ -54,7 +54,7 @@ const REQUEST_CARD_LIST = [
       res: "res",
     },
     ReqBtn: '<span class="material-icons-round">rocket_launch</span>',
-    ResBtn: '<span class="material-icons-round">description</span>',
+    ResBtn: '<span class="material-icons-round">data_object</span>',
     note: false,
   },
   {
@@ -149,7 +149,7 @@ const FEATURES_CARD_LIST = [
   },
   {
     icon: `<span class="material-icons-round">error</span>`,
-    text: `Удобный модуль обработки пользовательских ошибок с визуализацией невалидных параметров запроса.`,
+    text: `Модуль обработки пользовательских ошибок с визуализацией невалидных параметров запроса.`,
     title: "Обработка пользовательских ошибок",
   },
   {

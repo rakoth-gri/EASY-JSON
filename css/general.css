@@ -58,8 +58,7 @@ pre code {
 }
 
 p {
-  user-select: none;
-  margin: var(--app-md-spacing) 0px;
+  user-select: none;  
 }
 
 dfn,
@@ -81,9 +80,8 @@ section {
 ul,
 ol {
   list-style-position: inside;
-  line-height: inherit;
+  line-height: 140%;
   padding: var(--app-md-spacing);
-  margin: 0px;
 }
 
 a {

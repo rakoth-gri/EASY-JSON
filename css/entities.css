@@ -7,10 +7,6 @@
   margin-bottom: 1.5rem;
 }
 
-.entities-title {
-  width: 100%;
-  margin: var(--app-md-spacing);
-}
 
 .entities-card {
   padding: var(--app-lg-spacing);
