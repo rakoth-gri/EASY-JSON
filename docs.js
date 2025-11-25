@@ -1,6 +1,7 @@
 // service classes:
 import Components from "./service/Components.js";
 import { Request } from "./service/Request.js";
+import { UpwardButton } from "./service/UpWardButton.js";
 // consts:
 import { REQUEST_CARD_LIST } from "./models/models.js";
 // utils:
@@ -36,4 +37,7 @@ draw(addEntity, Components.ADD_ENTITY_DOCA("hostname", endPoint));
 
 // !Содержимое секции 'addEntity':
 draw(deleteEntity, Components.DELETE_ENTITY_DOCA("hostname", endPoint));
+
+// ! Отрисовка навигационной кнопки:
+new UpwardButton({ Component: Components.UPWARD_BTN });
 

@@ -1,5 +1,6 @@
 import { Requests } from "../requests/requests.js";
 import { Responses } from "../responses/responses.js";
+import { Errors } from "../errors/errors.js";
 // classes
 import Components from "./Components.js";
 // utils
@@ -63,7 +64,8 @@ class Request {
         const html =
           scheme === "req"
             ? Requests[id](this.endPoint)
-            : Responses[this.endPoint][id];
+            : scheme === "res" ? Responses[this.endPoint][id]
+            : Errors[id];
         codeContainer.querySelector("pre").innerHTML = html;
         codeContainer.style.maxHeight =
           codeContainer.firstElementChild.offsetHeight +

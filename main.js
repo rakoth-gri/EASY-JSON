@@ -16,6 +16,7 @@ import { draw, getHTMLFromList } from "./helpers/helpers.js";
 import Api from "./Api.js";
 import { Menu } from "./service/Menu.js";
 import { Request } from "./service/Request.js";
+import { UpwardButton } from "./service/UpWardButton.js";
 
 const FEATURES = document.querySelector("#features");
 const ENTITIES = document.querySelector("#entities");
@@ -52,17 +53,20 @@ const DOCUMENTATION_HTML = getHTMLFromList(DOCUMENTATION_LIST, (card) =>
 );
 draw(DOCUMENTATION, DOCUMENTATION_HTML);
 
+// ! Отрисовка навигационной кнопки:
+new UpwardButton({ Component: Components.UPWARD_BTN });
+
 // ! getEntities -----------
 // (async function (endPoint, qs) {
 //   let res = await Api.getEntities(endPoint, qs);
 //   console.log(res);
-// })(API_CONSTS.BOOKS, "page=1&sort=id:asc&limit=18");
+// })(API_CONSTS.BOOKS, "page=1&sort=vertigo:asc&limit=18");
 
 // ! getSingleEntity -----------
-(async function (endPoint, id) {
-  let res = await Api.getSingleEntity(endPoint, id);
-  console.log(res);
-})(API_CONSTS.BOOKS, "8");
+// (async function (endPoint, id) {
+//   let res = await Api.getSingleEntity(endPoint, id);
+//   console.log(res);
+// })(API_CONSTS.BOOKS, "44");
 
 // ! getSearchedEntity -----------
 // (async function (endPoint, q) {
@@ -77,8 +81,8 @@ draw(DOCUMENTATION, DOCUMENTATION_HTML);
 // })(API_CONSTS.BOOKS, {});
 
 // ! deleteEntity-----------
-// (async function (endPoint, id) {
-//   let res = await Api.deleteEntity(endPoint, id);
-//   console.log(res);
-// })(API_CONSTS.BOOKS, "5");
+(async function (endPoint, id) {
+  let res = await Api.deleteEntity(endPoint, id);
+  console.log(res);
+})(API_CONSTS.BOOKS, "45");
 

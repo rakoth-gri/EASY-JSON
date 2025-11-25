@@ -92,7 +92,7 @@ class Components {
     `;
   //! компоненты docs.html
   REQUEST_CARD_DOCS_PAGE(
-    { id, title, method, url, cls = "", scheme, ReqBtn, ResBtn, note },
+    { id, title, method, url, cls = "", scheme, ReqBtn, ResBtn, ErrBtn, note },
     host,
     endpoint
   ) {
@@ -105,7 +105,13 @@ class Components {
             <a class='btn ${cls}'> ${method} </a>
             <code class='request-card-url'> ${url(host, endpoint)} </code>
         </section>
-        ${this.URL_CARD_TRIGGERS({ id, ...scheme, ReqBtn, ResBtn })}        
+        ${this.URL_CARD_TRIGGERS({
+          id,
+          ...scheme,
+          ReqBtn,
+          ResBtn,
+          ErrBtn,
+        })}        
         <div data-id="${id}" class="code">
           <textarea></textarea>
           <div class="request-card-copybar">
@@ -124,7 +130,7 @@ class Components {
         <span class="danger">&#10071;</span>В качестве <strong class="warning">body</strong> передается объект с минимально необходимым набором полей <span class='warning'>см. схему ответа </span>. 
     </p>
     `;
-  URL_CARD_TRIGGERS({ id, req, res, ReqBtn, ResBtn }) {
+  URL_CARD_TRIGGERS({ id, req, res, err, ReqBtn, ResBtn, ErrBtn }) {
     return `
             <div class="request-card-triggers">
             <div class="request-card-trigger">
@@ -143,6 +149,15 @@ class Components {
                     data-scheme="${res}"
                 >
                     ${ResBtn}
+                </button>
+            </div>
+            <div class="request-card-trigger ">
+                <button
+                    class="btn btn-success trggr"
+                    data-id="${id}"
+                    data-scheme="${err}"
+                >
+                    ${ErrBtn}
                 </button>
             </div>
         </div>
@@ -201,8 +216,7 @@ class Components {
             <span class="danger">&#10071;</span>Переменная <span class='warning'>\${field}</span> принимает следующие значения:
             <ul class='white-list'>${getHTMLFromList(
               SORTING_WHITE_LIST[endpoint],
-              (sortValue) =>
-                `<li class=' btn'> ${sortValue} </li>`
+              (sortValue) => `<li class=' btn'> ${sortValue} </li>`
             )}
             </ul>            
         </p>
@@ -262,6 +276,13 @@ class Components {
         <p class='request-card-note'>
             <span class="danger">&#10071;</span>Переменная <span class='warning'>\${id}</span> - идентификатор удаляемой сущности!            
         </p> 
+        `;
+  }
+  UPWARD_BTN() {
+    return `
+        <div class='icon-box upwardBtn'>
+          <span class="material-icons-round">arrow_upward</span>
+        </div>        
         `;
   }
 }

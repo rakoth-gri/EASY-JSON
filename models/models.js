@@ -38,9 +38,11 @@ const REQUEST_CARD_LIST = [
     scheme: {
       req: "req",
       res: "res",
+      err: "err",
     },
     ReqBtn: '<span class="material-icons-round">rocket_launch</span>',
     ResBtn: '<span class="material-icons-round">data_object</span>',
+    ErrBtn: '<span class="material-icons-round">error</span>',
     note: false,
   },
   {
@@ -52,9 +54,11 @@ const REQUEST_CARD_LIST = [
     scheme: {
       req: "req",
       res: "res",
+      err: "err",
     },
     ReqBtn: '<span class="material-icons-round">rocket_launch</span>',
     ResBtn: '<span class="material-icons-round">data_object</span>',
+    ErrBtn: '<span class="material-icons-round">error</span>',
     note: false,
   },
   {
@@ -66,9 +70,11 @@ const REQUEST_CARD_LIST = [
     scheme: {
       req: "req",
       res: "res",
+      err: "err",
     },
     ReqBtn: '<span class="material-icons-round">rocket_launch</span>',
     ResBtn: '<span class="material-icons-round">data_object</span>',
+    ErrBtn: '<span class="material-icons-round">error</span>',
     note: false,
   },
   {
@@ -80,9 +86,11 @@ const REQUEST_CARD_LIST = [
     scheme: {
       req: "req",
       res: "res",
+      err: "err",
     },
     ReqBtn: '<span class="material-icons-round">rocket_launch</span>',
     ResBtn: '<span class="material-icons-round">data_object</span>',
+    ErrBtn: '<span class="material-icons-round">error</span>',
     note: false,
   },
   {
@@ -94,9 +102,11 @@ const REQUEST_CARD_LIST = [
     scheme: {
       req: "req",
       res: "res",
+      err: "err",
     },
     ReqBtn: '<span class="material-icons-round">rocket_launch</span>',
     ResBtn: '<span class="material-icons-round">data_object</span>',
+    ErrBtn: '<span class="material-icons-round">error</span>',
     note: true,
   },
   {
@@ -108,9 +118,11 @@ const REQUEST_CARD_LIST = [
     scheme: {
       req: "req",
       res: "res",
+      err: "err",
     },
     ReqBtn: '<span class="material-icons-round">rocket_launch</span>',
     ResBtn: '<span class="material-icons-round">data_object</span>',
+    ErrBtn: '<span class="material-icons-round">error</span>',
     note: false,
   },
 ];
