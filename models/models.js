@@ -7,25 +7,25 @@ const API_CONSTS = {
 
 const URLS = {
   getEntities: (host, ep = "${endpoint}") =>
-    `https://${host}/<span class='warning'>${ep}</span>`,
+    `https://${host}/${ep}`,
   getEntitiesQS: (host, ep = "${endpoint}") =>
-    `https://${host}/<span class='warning'>${ep}</span>?page=<span class='warning'>\${value}</span>&limit=<span class='warning'>\${value}</span>`,
+    `https://${host}/${ep}?page=\${value}&limit=\${value}`,
   getSingleEntity: (host, ep = "${endpoint}") =>
-    `https://${host}/<span class='warning'>${ep}</span>/<span class='warning'>\${id}</span>`,
+    `https://${host}/${ep}/\${id}`,
   getSearchedEntity: (host, ep = "${endpoint}") =>
-    `https://${host}/<span class='warning'>${ep}</span>?q=<span class='warning'>\${value}</span>`,
+    `https://${host}/${ep}?q=\${value}`,
   addEntity: (host, ep = "${endpoint}") =>
-    `https://${host}/<span class='warning'>${ep}</span>`,
+    `https://${host}/${ep}`,
   deleteEntity: (host, ep = "${endpoint}") =>
-    `https://${host}/<span class='warning'>${ep}</span>/<span class='warning'>\${id}</span>`,
+    `https://${host}/${ep}/\${id}`,
   getLimitedEntities: (host, ep = "${endpoint}") =>
-    `https://${host}/<span class='warning'>${ep}</span>?limit=<span class='warning'>10</span>`,
+    `https://${host}/${ep}?limit=10`,
   getPaginatedEntities: (host, ep = "${endpoint}") =>
-    `https://${host}/<span class='warning'>${ep}</span>?page=<span class='warning'>2</span>&limit=<span class='warning'>10</span>`,
+    `https://${host}/${ep}?page=2&limit=10`,
   getSelectedEntities: (host, ep = "${endpoint}") =>
-    `https://${host}/<span class='warning'>${ep}</span>?select=<span class='warning'>value1,value2</span>`,
+    `https://${host}/${ep}?select=value1,value2`,
   getSortedEntities: (host, ep = "${endpoint}") =>
-    `https://${host}/<span class='warning'>${ep}</span>?sort=<span class='warning'>\${field}:\${dir}</span>`,
+    `https://${host}/${ep}?sort=\${field}:\${dir}`,
 };
 
 const REQUEST_CARD_LIST = [
@@ -191,23 +191,23 @@ const EXAMPLES_LIST = [
   },
   {
     href: `http://${API_CONSTS.HOST}/${API_CONSTS.BOOKS}/5`,
-    text: `http://hostname/${API_CONSTS.BOOKS}/<span class="warning">5</span>`,
+    text: `http://hostname/${API_CONSTS.BOOKS}/5`,
   },
   {
     href: `http://${API_CONSTS.HOST}/${API_CONSTS.ATHLETES}?q=Лионель Месси`,
-    text: `http://hostname/${API_CONSTS.ATHLETES}?q=Месси</span>`,
+    text: `http://hostname/${API_CONSTS.ATHLETES}?q=Месси`,
   },
   {
     href: `http://${API_CONSTS.HOST}/${API_CONSTS.BOOKS}?select=title,author,pageCount`,
-    text: `http://hostname/${API_CONSTS.BOOKS}<span class="warning">?select=title,author,pageCount</span>`,
+    text: `http://hostname/${API_CONSTS.BOOKS}?select=title,author,pageCount`,
   },
   {
     href: `http://${API_CONSTS.HOST}/${API_CONSTS.BOOKS}?sort=pageCount:desc`,
-    text: `http://hostname/${API_CONSTS.BOOKS}<span class="warning">?sort=pageCount:desc</span>`,
+    text: `http://hostname/${API_CONSTS.BOOKS}?sort=pageCount:desc`,
   },
   {
     href: `http://${API_CONSTS.HOST}/${API_CONSTS.BOOKS}?limit=5&page=3`,
-    text: `http://hostname/${API_CONSTS.BOOKS}<span class="warning">?limit=5&page=3</span>`,
+    text: `http://hostname/${API_CONSTS.BOOKS}?limit=5&page=3`,
   },
 ];
 

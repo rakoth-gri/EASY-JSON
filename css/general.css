@@ -19,18 +19,20 @@ body {
 h1,
 h2,
 h3 {
-  text-align: center;
   text-transform: uppercase;
-  letter-spacing: 1px;
+  letter-spacing: 1.5px;
   user-select: none;
   line-height: 140%;
+  width: 100%;
 }
 
 h3 {
-  text-align: left;
   margin: var(--app-md-spacing) 0px;
   font-size: 1.2em;
-  width: 100%;
+}
+
+h2 {
+  text-align: center;
 }
 
 header {
@@ -58,7 +60,7 @@ pre code {
 }
 
 p {
-  user-select: none;  
+  user-select: none;
 }
 
 dfn,
@@ -73,10 +75,6 @@ blockquote {
   width: 100%;
 }
 
-section {
-  padding: var(--app-lg-spacing);
-}
-
 ul,
 ol {
   list-style-position: inside;
@@ -89,6 +87,7 @@ a {
   color: inherit;
   display: inline-block;
   transition: all 0.2s linear;
+  width: auto;
 }
 
 button {

@@ -5,10 +5,16 @@
 
 .h1
 	width: 100%
+	margin: $app-lg-spacing 0px
+	font-size: 1.8em
+
+.h1.docs 
+	text-align: center	
+
 	
 .h2
 	width: 100%
-	margin: $app-md-spacing 0px		
+	margin: $app-xl-spacing 0px	
 
 .code 
 	margin-top: $app-md-spacing
@@ -34,13 +40,11 @@
 	word-break: break-all
 	letter-spacing: 0.7px	
 
-	a
-		&:hover 
-			color: $app-warning-color
-			transform: scale(1.01)
+	a:hover 
+		color: $app-warning-color
+		transform: scale(1.01)
 
-		&:visited
-			color: $app-success-color	
+		
 
 
 /* параграфы секций */
@@ -54,13 +58,14 @@
 /* Информационные секции на странице docs.html */
 
 .app-section 
-	margin-bottom: 1.75rem
+	margin-bottom: 2.5rem
 
 
 /* контейнер для иконок */
 
 .icon-box 
 	padding: $app-md-spacing
+	display: flex
 	color: $app-warning-color
 	border-radius: $app-sm-spacing
 	background: $app-features-card-bg  
@@ -90,9 +95,10 @@
 
 /* Секция кнопки назад */
 
-.back 
-	padding: 0px $app-lg-spacing	
+.back
 
+	margin: $app-xl-spacing 0px
+	
 	a 
 		width: max-content
 
@@ -100,20 +106,25 @@
 			transform: scale(1.02)
 			color: $app-success-color
 
+	.material-icons-round 
+		font-size: 2rem				
+
 
 .white-list 
 	padding: 0px $app-sm-spacing
 	display: flex
 	align-items: center
-	flex-wrap: wrap
+	flex-wrap: wrap	
 	gap: $app-sm-spacing		
 
 	.btn
 		font-size: inherit
 		color: $app-light-color
-		border: 1px dotted $app-danger-color		
+		border: 1px dotted $app-light-color		
 		text-transform: none
 		letter-spacing: 1px
+
+/* Кнопка Вверх */		
 
 .upwardBtn
 	opacity: 0
@@ -127,6 +138,9 @@
 	display: flex
 	align-items: center
 	justify-content: center
+	cursor: pointer
+	box-shadow: $app-entities-card-shadow
+	transition: 0.25s all ease-out
 
 	.material-icons-round 
 		font-size: 2rem
@@ -136,5 +150,11 @@
 		z-index: 3
 
 
+// Примечание
 
+.note
+	opacity: 0.87
+	font-size: 0.95em
+	font-style: italic
+	margin: $app-md-spacing 0px		
 

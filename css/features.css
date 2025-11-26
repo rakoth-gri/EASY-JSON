@@ -3,13 +3,12 @@
   justify-content: center;
   flex-wrap: wrap;
   border: none;
-  margin-bottom: 1.5rem;
 }
 
 .features-card {
   width: 31%;
   padding: var(--app-lg-spacing);
-  border-radius: var(--app-md-spacing);  
+  border-radius: var(--app-md-spacing);
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -31,16 +30,18 @@
   border: none;
   background-color: var(--app-light-color);
   border-radius: var(--app-sm-spacing);
-  margin: var(--app-sm-spacing) 0px;
   opacity: 0.07;
 }
 
 .features-card-text {
-  margin: var(--app-md-spacing 0px);
+  margin: var(--app-md-spacing 0px) 0px;
   font-size: 1.1em;
 }
 
-
 .features-card-icon span {
   font-size: 1.25em;
+}
+
+.features-card-icon .material-icons-round {
+  font-size: 2rem;
 }

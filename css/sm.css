@@ -5,16 +5,26 @@
     padding: var(--app-sm-spacing);
   }
 
+  .slogan {
+    width: 65%;
+    padding: 1rem;
+    text-align: center;
+  }
+
+  .main-nav .li {
+    margin: var(--app-lg-spacing) 0px;
+  }
+
   .li {
     margin: var(--app-xl-spacing) 0px;
   }
 
-  .appContainer {
-    padding: var(--app-sm-spacing) 0px;
+  .li a {
+    width: 100%;
   }
 
-  .h1 {
-    font-size: 1.1rem;
+  .appContainer {
+    padding: var(--app-sm-spacing) 0px;
   }
 
   .features-card {
@@ -43,16 +53,11 @@
     padding: var(--app-md-spacing) 0px;
   }
 
-  .request-card-copybar {
-    padding: var(--app-sm-spacing);
-  }
-
   .request-card-copybar,
   .request-card-copybar button {
     padding: var(--app-sm-spacing);
   }
 
- 
   .icon-box,
   .back .btn {
     padding: var(--app-sm-spacing);

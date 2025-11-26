@@ -1,6 +1,5 @@
 .requests {
-  border: none;
-  margin-bottom: 1.5rem;
+  border: none;  
 }
 
 .request-card {
@@ -63,12 +62,6 @@ h3 {
 .request-card-copybar:hover {
   color: var(--app-warning-color);
   background: none;
-}
-
-.request-card-note {
-  opacity: 0.8;
-  font-size: 0.95em;
-  margin: var(--app-md-spacing 0px);
 }
 
 .request-card-triggers {

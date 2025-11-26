@@ -33,11 +33,7 @@
     padding: var(--app-md-spacing);
   }
 
-  .header-menu .li {
-    font-size: 1.25em;
-    font-weight: 500;
-  }
-
+ 
   .header-menu .li::after {
     content: "";
     height: 2px;
@@ -49,10 +45,7 @@
     border-radius: 2px;
   }
 
-  .h1 {
-    font-size: 1.6rem;
-  }
-
+ 
   .app-section {
     padding: 0px var(--app-sm-spacing);
   }
@@ -68,16 +61,11 @@
   }
 
   .entities-card {
-    width: 47%;
-    margin: calc(6% / 4);
+    width: 47%;   
     padding: 0px;
     justify-self: center;
   }
 
-  .request-card-note {
-    display: block;
-    padding: 0px;
-  }
 
   .request-card .material-symbols-outlined {
     font-size: 1.25rem;
@@ -88,7 +76,5 @@
     padding: var(--app-md-spacing);
   }
 
-  .li a {
-    width: auto;
-  }
+  
 }
