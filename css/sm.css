@@ -5,6 +5,10 @@
     padding: var(--app-sm-spacing);
   }
 
+  .appContainer {
+    padding: var(--app-sm-spacing) 0px;
+  }
+
   .slogan {
     width: 65%;
     padding: 1rem;
@@ -15,21 +19,10 @@
     margin: var(--app-lg-spacing) 0px;
   }
 
-  .li {
-    margin: var(--app-xl-spacing) 0px;
-  }
-
-  .li a {
-    width: 100%;
-  }
-
-  .appContainer {
-    padding: var(--app-sm-spacing) 0px;
-  }
 
   .features-card {
     width: 100%;
-    height: 220px;
+    height: auto;
     margin: var(--app-md-spacing) 0px;
     font-size: 1.15em;
   }
@@ -63,8 +56,4 @@
     padding: var(--app-sm-spacing);
   }
 
-  ol,
-  ul {
-    list-style-type: none;
-  }
-}
+ }

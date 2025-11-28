@@ -34,7 +34,7 @@
 }
 
 .features-card-text {
-  margin: var(--app-md-spacing 0px) 0px;
+  margin: var(--app-md-spacing) 0px;
   font-size: 1.1em;
 }
 

@@ -7,8 +7,4 @@
   ul {
     padding: 0px;
   }
-
-  .li {
-    margin: var(--app-lg-spacing) 0px;
-  }
 }

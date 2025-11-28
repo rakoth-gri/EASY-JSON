@@ -6,18 +6,14 @@ const API_CONSTS = {
 };
 
 const URLS = {
-  getEntities: (host, ep = "${endpoint}") =>
-    `https://${host}/${ep}`,
+  getEntities: (host, ep = "${endpoint}") => `https://${host}/${ep}`,
   getEntitiesQS: (host, ep = "${endpoint}") =>
     `https://${host}/${ep}?page=\${value}&limit=\${value}`,
-  getSingleEntity: (host, ep = "${endpoint}") =>
-    `https://${host}/${ep}/\${id}`,
+  getSingleEntity: (host, ep = "${endpoint}") => `https://${host}/${ep}/\${id}`,
   getSearchedEntity: (host, ep = "${endpoint}") =>
     `https://${host}/${ep}?q=\${value}`,
-  addEntity: (host, ep = "${endpoint}") =>
-    `https://${host}/${ep}`,
-  deleteEntity: (host, ep = "${endpoint}") =>
-    `https://${host}/${ep}/\${id}`,
+  addEntity: (host, ep = "${endpoint}") => `https://${host}/${ep}`,
+  deleteEntity: (host, ep = "${endpoint}") => `https://${host}/${ep}/\${id}`,
   getLimitedEntities: (host, ep = "${endpoint}") =>
     `https://${host}/${ep}?limit=10`,
   getPaginatedEntities: (host, ep = "${endpoint}") =>
@@ -187,27 +183,27 @@ const ENTITIES_LIST = [
 const EXAMPLES_LIST = [
   {
     href: `http://${API_CONSTS.HOST}/${API_CONSTS.BOOKS}`,
-    text: `http://hostname/books`,
+    text: `<div class="icon-box"><span class="material-icons-round">cloud</span></div> http://hostname/books`,
   },
   {
     href: `http://${API_CONSTS.HOST}/${API_CONSTS.BOOKS}/5`,
-    text: `http://hostname/${API_CONSTS.BOOKS}/5`,
+    text: `<div class="icon-box"><span class="material-icons-round">cloud</span></div> http://hostname/${API_CONSTS.BOOKS}/5`,
   },
   {
     href: `http://${API_CONSTS.HOST}/${API_CONSTS.ATHLETES}?q=Лионель Месси`,
-    text: `http://hostname/${API_CONSTS.ATHLETES}?q=Месси`,
+    text: `<div class="icon-box"><span class="material-icons-round">cloud</span></div> http://hostname/${API_CONSTS.ATHLETES}?q=Месси`,
   },
   {
     href: `http://${API_CONSTS.HOST}/${API_CONSTS.BOOKS}?select=title,author,pageCount`,
-    text: `http://hostname/${API_CONSTS.BOOKS}?select=title,author,pageCount`,
+    text: `<div class="icon-box"><span class="material-icons-round">cloud</span></div> http://hostname/${API_CONSTS.BOOKS}?select=title,author,pageCount`,
   },
   {
     href: `http://${API_CONSTS.HOST}/${API_CONSTS.BOOKS}?sort=pageCount:desc`,
-    text: `http://hostname/${API_CONSTS.BOOKS}?sort=pageCount:desc`,
+    text: `<div class="icon-box"><span class="material-icons-round">cloud</span></div> http://hostname/${API_CONSTS.BOOKS}?sort=pageCount:desc`,
   },
   {
     href: `http://${API_CONSTS.HOST}/${API_CONSTS.BOOKS}?limit=5&page=3`,
-    text: `http://hostname/${API_CONSTS.BOOKS}?limit=5&page=3`,
+    text: `<div class="icon-box"><span class="material-icons-round">cloud</span></div> http://hostname/${API_CONSTS.BOOKS}?limit=5&page=3`,
   },
 ];
 
@@ -237,11 +233,11 @@ const MENU_LIST = [
 const DOCUMENTATION_LIST = [
   {
     href: `/docs.html?endpoint=books`,
-    text: `Документация по эндпоинту <em class="warning">'books'</em>`,
+    text: `<div class="icon-box"><span class="material-icons-round">description</span></div> Документация <strong> books</strong>`,
   },
   {
     href: `/docs.html?endpoint=athletes`,
-    text: `Документация по эндпоинту  <em class="warning">'athletes'</em>`,
+    text: `<div class="icon-box"><span class="material-icons-round">description</span></div> Документация <strong> athletes</strong>`,
   },
 ];
 

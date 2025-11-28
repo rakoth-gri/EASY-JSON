@@ -1,17 +1,18 @@
 .entities {
   display: flex;
-  justify-content: space-between; 
+  justify-content: center;
   flex-wrap: wrap;
-  border: none; 
+  border: none;
 }
 
-.entities-card {  
+.entities-card {
   border-radius: var(--app-md-spacing);
   text-align: center;
   font-size: 1.1em;
   letter-spacing: 1.5px;
   cursor: pointer;
-  width: 47%;
+  width: 31%;
+  margin: calc((100% - 93%) / 6);
 }
 
 .entities-card .material-icons-round {

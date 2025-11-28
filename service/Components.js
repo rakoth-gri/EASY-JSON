@@ -76,12 +76,12 @@ class Components {
     </a>
     `;
   EXAMPLES_LINK = ({ href, text }) => `
-    <li class="li">
+    <li class="request-card-url doca">
         <a href="${href}">${text}</a>
     </li>
     `;
   DOCUMENTATION_LINK = ({ href, text }) => `
-    <li class="li">
+    <li class="request-card-url doca">
         <a href="${href}">
             ${text}
         </a>
@@ -124,7 +124,7 @@ class Components {
   }
   NOTE_DOCS_PAGE = () => `
     <p class="note">
-        <span class="danger">&#10071;</span>В качестве <em>body</em> передается объект с минимально необходимым набором полей <span class='warning'>см. схему</span>. 
+        <span class="danger">&#10071;</span>В качестве <strong>body</strong> передается объект с минимально необходимым набором полей <span class='warning'>(см. схему)</span>. 
     </p>
     `;
   URL_CARD_TRIGGERS({ id, req, res, err, ReqBtn, ResBtn, ErrBtn }) {
@@ -163,9 +163,8 @@ class Components {
   PAGINATION_DOCA(host, endpoint) {
     return `
         <p class='section-text'>
-          Получение порции данных осуществляется
-          <abbr title="" class='warning'>GET</abbr>-запросом с передачей
-          параметров: <em class='warning'>"limit", "page"</em>:
+          Получение порции данных осуществляется GET-запросом с передачей
+          параметров: <strong>limit, page</strong>:
         </p>
         <div>
             <code class='request-card-url doca'> ${URLS.getPaginatedEntities(
@@ -179,8 +178,7 @@ class Components {
     return `
         <p class='section-text'>
           Получение данных по выбранным полям сущностей осуществляется
-          <abbr class='warning'>GET</abbr>-запросом с передачей
-          параметра: <em class='warning'>"select"</em>:
+          GET-запросом с передачей параметра <strong>select</strong>:
         </p>
         <div>
             <code class='request-card-url doca'>${URLS.getSelectedEntities(
@@ -192,16 +190,15 @@ class Components {
             <span class="danger">&#10071;</span>Наименования полей у разных сущностей отличаются! Для передачи корректных значений <a href="#getEntities" class='warning'>см. схему</a>.
         </p>
         <p class='note'>
-            <span class="danger">&#10071;</span>Значением параметра <em class='warning'>"select"</em> является строка без пробелов, содержащая: название запрашиваемого поля или нескольких полей, разделенных запятыми.
+            <span class="danger">&#10071;</span>Значением параметра <strong>select</strong> является строка без пробелов, содержащая: название запрашиваемого поля или нескольких полей, разделенных запятыми.
         </p>
         `;
   }
   SORTING_DOCA(host, endpoint) {
     return `
         <p class='section-text'>
-          Сортировка данных по выбранным полям сущностей осуществляется
-          <abbr class='warning'>GET</abbr>-запросом с передачей
-          параметра <em class='warning'>"sort"</em>:
+          Сортировка данных по выбранным полям сущностей осуществляется GET-запросом с передачей
+          параметра <strong>sort</strong>:
         </p>
         <div>
             <code class='request-card-url doca'>${URLS.getSortedEntities(
@@ -210,7 +207,7 @@ class Components {
             )}</code>
         </div> 
         <p class='note'>
-            <span class="danger">&#10071;</span>Переменная <span class='warning'>\${field}</span> принимает следующие значения:
+            <span class="danger">&#10071;</span>Переменная \${field} принимает значения:
             <ul class='white-list'>${getHTMLFromList(
               SORTING_WHITE_LIST[endpoint],
               (sortValue) => `<li class=' btn'> ${sortValue} </li>`
@@ -218,7 +215,7 @@ class Components {
             </ul>            
         </p>
         <p class='note'>
-            <span class="danger">&#10071;</span>Переменная <span class='warning'>\${dir}</span> принимает значения:<em class='warning'> asc | desc</em>.
+            <span class="danger">&#10071;</span>Переменная \${dir} принимает значения:<strong> asc | desc</strong>.
         </p>
         `;
   }
@@ -226,8 +223,7 @@ class Components {
     return `
         <p class='section-text'>
           Получение лимитированного количеcтва сущностей осуществляется
-          <abbr class='warning'>GET</abbr>-запросом с передачей
-          query-параметра: <em class='warning'>"limit"</em>:
+          GET-запросом с передачей query-параметра: <strong>limit</strong>:
         </p>
         <div>
             <code class='request-card-url doca'>${URLS.getLimitedEntities(
