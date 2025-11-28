@@ -232,11 +232,11 @@ const MENU_LIST = [
 
 const DOCUMENTATION_LIST = [
   {
-    href: `/docs.html?endpoint=books`,
+    href: `./docs.html?endpoint=books`,
     text: `<div class="icon-box"><span class="material-icons-round">description</span></div> Документация <strong> books</strong>`,
   },
   {
-    href: `/docs.html?endpoint=athletes`,
+    href: `./docs.html?endpoint=athletes`,
     text: `<div class="icon-box"><span class="material-icons-round">description</span></div> Документация <strong> athletes</strong>`,
   },
 ];
