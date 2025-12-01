@@ -7,7 +7,7 @@
 #documentation a {
   display: flex;
   align-items: center;
-  column-gap: var(--app-lg-spacing);
+  column-gap: var(--app-md-spacing);
 }
 
 #documentation a:hover {

@@ -1,6 +1,6 @@
+import { Errors } from "../errors/errors.js";
 import { Requests } from "../requests/requests.js";
 import { Responses } from "../responses/responses.js";
-import { Errors } from "../errors/errors.js";
 // classes
 import Components from "./Components.js";
 // utils
@@ -20,6 +20,7 @@ class Request {
     this.host = host;
     this.Component = Component;
     this.codeContainers = null;
+    this.triggers = null;
     // methods
     this.templator(
       this.$appContainer,
@@ -33,6 +34,8 @@ class Request {
 
   templator(appContainer, requestsContainer, list, endPoint, host, Component) {
     this.render(requestsContainer, list, endPoint, host, Component);
+    this.addEnterListenerToTriggers(this.triggers);
+    this.addLeaveListenerToTriggers(this.triggers);
     this.addListenerToAppContainer(appContainer);
   }
 
@@ -45,12 +48,15 @@ class Request {
     this.codeContainers.forEach((code) =>
       draw(code.querySelector("pre"), Requests[code.dataset.id](this.endPoint))
     );
+    this.triggers = requestsContainer.querySelectorAll(".request-card-trigger");
   }
 
   // ! Listeners -------
 
   addListenerToAppContainerHandler = async (e) => {
-    if (!(e.target.closest(".trggr") || e.target.closest(".request-card-copybar")))
+    if (
+      !(e.target.closest(".trggr") || e.target.closest(".request-card-copybar"))
+    )
       return false;
 
     if (e.target.closest(".trggr")) {
@@ -58,13 +64,16 @@ class Request {
 
       const { id, scheme } = trigger.dataset;
 
-      const codeContainer = this.codeContainers.find((bl) => bl.dataset.id === id);
+      const codeContainer = this.codeContainers.find(
+        (bl) => bl.dataset.id === id
+      );
 
       if (!codeContainer.offsetHeight) {
         const html =
-          scheme === "req"
+          scheme === "запрос"
             ? Requests[id](this.endPoint)
-            : scheme === "res" ? Responses[this.endPoint][id]
+            : scheme === "ответ"
+            ? Responses[this.endPoint][id]
             : Errors[id];
         codeContainer.querySelector("pre").innerHTML = html;
         codeContainer.style.maxHeight =
@@ -105,6 +114,25 @@ class Request {
     appContainer.addEventListener(
       "click",
       this.addListenerToAppContainerHandler
+    );
+  }
+
+  // ------------------------------------
+
+  addListenerToTriggersHandler(e) {
+    const t = e.target;
+    t.querySelector('.tooltip').classList.toggle('active');
+  }
+
+  addEnterListenerToTriggers(triggers) {
+    triggers.forEach((t) =>
+      t.addEventListener("mouseenter", this.addListenerToTriggersHandler)
+    );
+  }
+
+  addLeaveListenerToTriggers(triggers) {
+    triggers.forEach((t) =>
+      t.addEventListener("mouseleave", this.addListenerToTriggersHandler)
     );
   }
 }

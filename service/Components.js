@@ -131,6 +131,7 @@ class Components {
     return `
             <div class="request-card-triggers">
             <div class="request-card-trigger">
+                <div class="tooltip">${req}</div>
                 <button
                     class="btn btn-success trggr"
                     data-id="${id}"
@@ -139,7 +140,8 @@ class Components {
                     ${ReqBtn}
                 </button>
             </div>
-            <div class="request-card-trigger ">
+            <div class="request-card-trigger">
+                <div class="tooltip">${res}</div>
                 <button
                     class="btn btn-success trggr"
                     data-id="${id}"
@@ -148,7 +150,8 @@ class Components {
                     ${ResBtn}
                 </button>
             </div>
-            <div class="request-card-trigger ">
+            <div class="request-card-trigger">
+                <div class="tooltip">${err}</div>
                 <button
                     class="btn btn-success trggr"
                     data-id="${id}"
@@ -235,7 +238,7 @@ class Components {
   }
   ADD_ENTITY_DOCA(host, endpoint) {
     return `
-        <p>
+        <p class='section-text'>
           POST-запрос к API имитирует добавление новой сущности на сервер. В случае успеха, сервер вернет объект, содержащий поля, переданные в запросе <a href="#addEntity" class='warning'>(см. схему)</a>:
         </p>
         <div>
@@ -256,7 +259,7 @@ class Components {
   }
   DELETE_ENTITY_DOCA(host, endpoint) {
     return `
-        <p>
+        <p class='section-text'>
           DELETE-запрос к API имитирует удаление конкретной сущности на сервере. В случае успеха, сервер вернет объект с идентификатором, переданным в запросе <a href="#deleteEntity" class='warning'>(см. схему)</a>:
         </p>
         <div>

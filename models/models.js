@@ -32,9 +32,9 @@ const REQUEST_CARD_LIST = [
     url: (host, ep) => URLS.getEntities(host, ep),
     cls: "btn-success",
     scheme: {
-      req: "req",
-      res: "res",
-      err: "err",
+      req: "запрос",
+      res: "ответ",
+      err: "ошибка",
     },
     ReqBtn: '<span class="material-icons-round">rocket_launch</span>',
     ResBtn: '<span class="material-icons-round">data_object</span>',
@@ -48,9 +48,9 @@ const REQUEST_CARD_LIST = [
     url: (host, ep) => URLS.getEntitiesQS(host, ep),
     cls: "btn-success",
     scheme: {
-      req: "req",
-      res: "res",
-      err: "err",
+      req: "запрос",
+      res: "ответ",
+      err: "ошибка",
     },
     ReqBtn: '<span class="material-icons-round">rocket_launch</span>',
     ResBtn: '<span class="material-icons-round">data_object</span>',
@@ -64,9 +64,9 @@ const REQUEST_CARD_LIST = [
     url: (host, ep) => URLS.getSingleEntity(host, ep),
     cls: "btn-success",
     scheme: {
-      req: "req",
-      res: "res",
-      err: "err",
+      req: "запрос",
+      res: "ответ",
+      err: "ошибка",
     },
     ReqBtn: '<span class="material-icons-round">rocket_launch</span>',
     ResBtn: '<span class="material-icons-round">data_object</span>',
@@ -80,9 +80,9 @@ const REQUEST_CARD_LIST = [
     url: (host, ep) => URLS.getSearchedEntity(host, ep),
     cls: "btn-success",
     scheme: {
-      req: "req",
-      res: "res",
-      err: "err",
+      req: "запрос",
+      res: "ответ",
+      err: "ошибка",
     },
     ReqBtn: '<span class="material-icons-round">rocket_launch</span>',
     ResBtn: '<span class="material-icons-round">data_object</span>',
@@ -96,9 +96,9 @@ const REQUEST_CARD_LIST = [
     url: (host, ep) => URLS.addEntity(host, ep),
     cls: "btn-success",
     scheme: {
-      req: "req",
-      res: "res",
-      err: "err",
+      req: "запрос",
+      res: "ответ",
+      err: "ошибка",
     },
     ReqBtn: '<span class="material-icons-round">rocket_launch</span>',
     ResBtn: '<span class="material-icons-round">data_object</span>',
@@ -112,9 +112,9 @@ const REQUEST_CARD_LIST = [
     url: (host, ep) => URLS.deleteEntity(host, ep),
     cls: "btn-success",
     scheme: {
-      req: "req",
-      res: "res",
-      err: "err",
+      req: "запрос",
+      res: "ответ",
+      err: "ошибка",
     },
     ReqBtn: '<span class="material-icons-round">rocket_launch</span>',
     ResBtn: '<span class="material-icons-round">data_object</span>',
@@ -233,11 +233,11 @@ const MENU_LIST = [
 const DOCUMENTATION_LIST = [
   {
     href: `./docs.html?endpoint=books`,
-    text: `<div class="icon-box"><span class="material-icons-round">description</span></div> Документация <strong> books</strong>`,
+    text: `<div class="icon-box"><span class="material-icons-round">description</span></div> Документация <em style="font-weight:bold;">books</em>`,
   },
   {
     href: `./docs.html?endpoint=athletes`,
-    text: `<div class="icon-box"><span class="material-icons-round">description</span></div> Документация <strong> athletes</strong>`,
+    text: `<div class="icon-box"><span class="material-icons-round">description</span></div> Документация <em style="font-weight:bold;">athletes</em>`,
   },
 ];
 

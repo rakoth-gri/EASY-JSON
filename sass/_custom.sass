@@ -15,7 +15,7 @@
 	
 .h2
 	width: 100%
-	margin: $app-xl-spacing 0px	
+	margin: $app-xl-spacing 0px	$app-md-spacing 0px
 
 .code 
 	margin-top: $app-md-spacing
@@ -38,22 +38,22 @@
 	font-family: "FiraCode"	
 	font-size: 1.2em
 	word-break: break-all
-	letter-spacing: 0.7px	
+	letter-spacing: 0.7px
 
-	a:hover 
-		color: $app-warning-color
-		transform: scale(1.01)
+	a
+		width: 100%
+		display: inline-block	
 
-		
-
+		&:hover 
+			color: $app-warning-color
+			transform: scale(1.01)
 
 /* параграфы секций */
 
 .section-text   
 	font-weight: 400
-	line-height: 140%
-	text-indent: $app-sm-spacing
-	margin: $app-md-spacing 0px
+	line-height: 140%	
+	margin: $app-md-spacing
 
 /* Информационные секции на странице docs.html */
 
@@ -78,26 +78,12 @@
 .burger .material-icons-round 
 	font-size: 2rem
 
-/* секции addEntity, deleteEntity c описанием POST,DELETE запросов */
-
-#addEntity,
-#deleteEntity
-	p
-		&:first-of-type
-			 	 
-			border: 2px dotted $app-success-color
-			padding: $app-md-spacing
-			border-radius: $app-sm-spacing			
-			text-indent: $app-sm-spacing
-			margin: $app-md-spacing 0px			
-
-
 
 /* Секция кнопки назад */
 
 .back
 
-	margin: $app-xl-spacing 0px
+	margin: $app-md-spacing 0px $app-xl-spacing 0px
 	
 	a 
 		width: max-content
@@ -123,6 +109,7 @@
 		border: 1px dotted $app-light-color		
 		text-transform: none
 		letter-spacing: 1px
+		border-radius: $app-sm-spacing
 
 /* Кнопка Вверх */		
 
@@ -149,12 +136,29 @@
 		opacity: 1
 		z-index: 3
 
-
 // Примечание
 
 .note
 	opacity: 0.87
-	font-size: 0.95em
-	font-style: italic
-	margin: $app-md-spacing 0px		
+	font-size: 0.95em	
+	margin: $app-md-spacing 0px
 
+
+.tooltip
+	position: absolute
+	background: $app-features-card-bg
+	padding: $app-sm-spacing
+	border-radius: $app-md-spacing 0px
+	color: $app-danger-color
+	font-weight: 500
+	font-variant: small-caps
+	left: 0px
+	top: 0px
+	transform: translateY(-100%)
+	opacity: 0
+	transition: 0.25s all linear
+	box-shadow: $app-entities-card-shadow
+
+	&.active
+		opacity: 1	
+	

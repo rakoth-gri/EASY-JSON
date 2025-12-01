@@ -17,7 +17,7 @@
 
 .h2 {
   width: 100%;
-  margin: var(--app-xl-spacing) 0px;
+  margin: var(--app-xl-spacing) 0px var(--app-md-spacing) 0px;
 }
 
 /* секции с кодом запросов и схемами ответов */
@@ -49,6 +49,11 @@
   letter-spacing: 0.7px;
 }
 
+.li > a {
+  width: 100%;
+  display: inline-block;
+}
+
 .li > a:hover {
   color: var(--app-success-color);
   transform: scale(1.01);
@@ -59,8 +64,7 @@
 .section-text {
   font-weight: 400;
   line-height: 140%;
-  text-indent: var(--app-sm-spacing);
-  margin: var(--app-md-spacing 0px);
+  margin: var(--app-md-spacing);
 }
 
 /* Информационные секции на странице docs.html */
@@ -87,21 +91,11 @@
 .burger .material-icons-round {
   font-size: 2rem;
 }
-/* секции addEntity, deleteEntity c описанием POST/DELETE запросов */
-
-#addEntity p:first-of-type,
-#deleteEntity p:first-of-type {
-  border: 2px dotted var(--app-success-color);
-  padding: var(--app-md-spacing);
-  border-radius: var(--app-sm-spacing);
-  text-indent: var(--app-sm-spacing);
-  margin: var(--app-md-spacing 0px);
-}
 
 /* Секция кнопки назад */
 
 .back {
-  padding: 0px var(--app-xl-spacing);
+  padding: var(--app-md-spacing) 0px var(--app-xl-spacing) 0px;
 }
 
 .back a {
@@ -127,6 +121,7 @@
   border: 1px dotted var(--app-light-color);
   text-transform: none;
   letter-spacing: 1px;
+  border-radius: var(--app-sm-spacing);
 }
 
 .upwardBtn {
@@ -157,6 +152,25 @@
 .note {
   opacity: 0.87;
   font-size: 0.95em;
-  font-style: italic;
   margin: var(--app-md-spacing) 0px;
+}
+
+.tooltip {
+  position: absolute;
+  background: var(--app-features-card-bg);
+  padding: var(--app-sm-spacing);
+  border-radius: var(--app-md-spacing) 0px;
+  color: var(--app-danger-color);
+  font-weight: 500;
+  font-variant: small-caps;
+  left: 0px;
+  top: 0px;
+  transform: translateY(-100%);
+  opacity: 0;
+  transition: 0.25s all linear;
+  box-shadow: var(--app-entities-card-shadow);
+}
+
+.tooltip.active {
+  opacity: 1;
 }

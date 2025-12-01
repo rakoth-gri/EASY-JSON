@@ -21,7 +21,7 @@
     var(--app-darken-color)
   );
 
-  --app-entities-card-bg: linear-gradient(
+  --app-danger-card-bg: linear-gradient(
     to right top,
     var(--app-pink-color) 30%,
     var(--app-danger-color) 75%
