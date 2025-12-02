@@ -1,3 +1,7 @@
+@for $i from 1 through 8 
+	.features-card:nth-of-type(#{$i}) 
+		transform: translateX(-$app-card-offset * 1)
+	
 .features 
 	display: flex
 	justify-content: center 
@@ -12,14 +16,21 @@
 		flex-direction: column
 		justify-content: flex-start
 		position: relative
-		transition: transform 0.25s ease-out
+		transition: all 0.25s linear
 		height: 275px
 		margin: calc(7% / 6)
 		background: $app-features-card-bg
 		box-shadow: $app-features-card-shadow
+		opacity: 0
+
+		&.active
+			opacity: 1
+			transform: translateX(0%)
 
 		&:hover 
 			transform: translateY(-0.5rem)
+
+
 
 		&-hr 
 			height: 3px

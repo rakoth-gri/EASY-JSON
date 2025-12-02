@@ -36,7 +36,7 @@ class Menu {
       const { id } = e.target;
       document.querySelector(id).scrollIntoView({
         behavior: "smooth",
-        block: "start",
+        block: 'start',
         inline: "nearest",
       });
       this.hilightChosenLink(this.menuLinks, e.target);

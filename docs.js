@@ -16,6 +16,9 @@ const selectedFields = document.querySelector("#selectedFields");
 const sorting = document.querySelector("#sorting");
 const addEntity = document.querySelector("#addEntity");
 const deleteEntity = document.querySelector("#deleteEntity");
+const endPointName = document.querySelector(".endpoint");
+
+endPointName.textContent = endPoint;
 
 // !Содержимое секции 'urls':
 new Request({list: REQUEST_CARD_LIST, endPoint, Component: 'REQUEST_CARD_DOCS_PAGE'})
@@ -40,4 +43,5 @@ draw(deleteEntity, Components.DELETE_ENTITY_DOCA("hostname", endPoint));
 
 // ! Отрисовка навигационной кнопки:
 new UpwardButton({ Component: Components.UPWARD_BTN });
+
 

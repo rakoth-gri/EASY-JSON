@@ -1,3 +1,44 @@
+.features-card:nth-of-type(1) {
+  -webkit-transform: translateX(-40%);
+  -ms-transform: translateX(-40%);
+  transform: translateX(-40%);
+}
+.features-card:nth-of-type(2) {
+  -webkit-transform: translateX(-40%);
+  -ms-transform: translateX(-40%);
+  transform: translateX(-40%);
+}
+.features-card:nth-of-type(3) {
+  -webkit-transform: translateX(-40%);
+  -ms-transform: translateX(-40%);
+  transform: translateX(-40%);
+}
+.features-card:nth-of-type(4) {
+  -webkit-transform: translateX(-40%);
+  -ms-transform: translateX(-40%);
+  transform: translateX(-40%);
+}
+.features-card:nth-of-type(5) {
+  -webkit-transform: translateX(-40%);
+  -ms-transform: translateX(-40%);
+  transform: translateX(-40%);
+}
+.features-card:nth-of-type(6) {
+  -webkit-transform: translateX(-40%);
+  -ms-transform: translateX(-40%);
+  transform: translateX(-40%);
+}
+.features-card:nth-of-type(7) {
+  -webkit-transform: translateX(-40%);
+  -ms-transform: translateX(-40%);
+  transform: translateX(-40%);
+}
+.features-card:nth-of-type(8) {
+  -webkit-transform: translateX(-40%);
+  -ms-transform: translateX(-40%);
+  transform: translateX(-40%);
+}
+
 .features {
   display: flex;
   justify-content: center;
@@ -13,11 +54,19 @@
   flex-direction: column;
   justify-content: flex-start;
   position: relative;
-  transition: transform 0.25s ease-out;
+  transition: all 0.25s linear;
   height: 275px;
   margin: calc(7% / 6);
   background: var(--app-features-card-bg);
   box-shadow: var(--app-features-card-shadow);
+  opacity: 0;
+}
+
+.features-card.active {
+  opacity: 1;
+  -webkit-transform: translateX(0%);
+  -ms-transform: translateX(0%);
+  transform: translateX(0%);
 }
 
 .features-card:hover {

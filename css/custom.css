@@ -20,6 +20,12 @@
   margin: var(--app-xl-spacing) 0px var(--app-lg-spacing) 0px;
 }
 
+.endpoint {
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
 /* секции с кодом запросов и схемами ответов */
 .code {
   margin-top: var(--app-md-spacing);
