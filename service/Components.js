@@ -99,7 +99,7 @@ class Components {
             <strong class="request-card-title warning">${title}</strong>
         </h3>
         <section class="request-card-info" data-id="${id}" data-method="${method}">
-            <a class='btn ${cls}'> ${method} </a>
+            <button class='btn ${cls}'> ${method} </button>
             <code class='request-card-url'> ${url(host, endpoint)} </code>
         </section>
         ${this.URL_CARD_TRIGGERS({

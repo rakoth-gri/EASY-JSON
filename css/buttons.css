@@ -18,7 +18,7 @@
 
 .btn-success {
   background-color: var(--app-success-color);
-  color: var(--app-light-color);
+  color: var(--app-white-color);
 }
 
 .btn-light {

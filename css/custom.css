@@ -17,7 +17,7 @@
 
 .h2 {
   width: 100%;
-  margin: var(--app-xl-spacing) 0px var(--app-md-spacing) 0px;
+  margin: var(--app-xl-spacing) 0px var(--app-lg-spacing) 0px;
 }
 
 /* секции с кодом запросов и схемами ответов */
@@ -70,7 +70,7 @@
 /* Информационные секции на странице docs.html */
 
 .app-section {
-  margin-bottom: 2.5rem;
+  margin-bottom: 3.5rem;
 }
 
 /* контейнер для иконок */
@@ -168,7 +168,7 @@
   transform: translateY(-100%);
   opacity: 0;
   transition: 0.25s all linear;
-  box-shadow: var(--app-entities-card-shadow);
+  box-shadow: var(--app-light-card-shadow);
 }
 
 .tooltip.active {

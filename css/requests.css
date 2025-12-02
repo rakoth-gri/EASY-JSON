@@ -31,7 +31,7 @@ h3 {
   display: inline-block;
   width: auto;
   font-weight: 300;
-  font-size: 1.2em;
+  font-size: 1.15em;
   width: 100%;
   text-shadow: 0.3px 0.3px 1px var(--app-light-color);
   overflow-wrap: anywhere;
@@ -41,7 +41,8 @@ h3 {
   padding: var(--app-md-spacing);
   background-color: var(--app-success-color);
   border-radius: var(--app-sm-spacing);
-  display: flex;  
+  display: flex;
+  color: var(--app-white-color);  
 }
 
 .request-card-copybar {

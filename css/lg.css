@@ -30,7 +30,7 @@
 
   .header-menu {
     flex-direction: column;
-    padding: var(--app-md-spacing);
+    padding: 0px 
   }
 
   .header-menu .li::after {

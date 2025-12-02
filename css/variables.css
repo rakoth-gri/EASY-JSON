@@ -1,5 +1,6 @@
 :root {
   --app-dark-color: #2d302d;
+  --app-white-color: #fff;
   --app-darken-color: #444644;
   --app-danger-color: #d84961;
   --app-warning-color: #cfbf21;
@@ -33,7 +34,7 @@
   --app-xl-spacing: 1.25rem;
   --app-xxl-spacing: 1.5rem;
 
-  --app-entities-card-shadow: 0.5px 0.5px 3px var(--app-light-color),
+  --app-light-card-shadow: 0.5px 0.5px 3px var(--app-light-color),
     -0.5px -0.5px 3px var(--app-light-color);
 
   --app-features-card-shadow: 0.5px 0.5px 3px var(--app-danger-color),
