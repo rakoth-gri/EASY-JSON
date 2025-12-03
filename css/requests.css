@@ -55,6 +55,10 @@ h3 {
   color: var(--app-white-color);
 }
 
+.request-card-url.doca a {
+  width: 100%;
+}
+
 .request-card-copybar {
   padding: var(--app-md-spacing);
   display: flex;
