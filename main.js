@@ -2,22 +2,20 @@
 import Components from "./service/Components.js";
 // consts:
 import {
-  FEATURES_CARD_LIST,
-  API_CONSTS,
   DOCUMENTATION_LIST,
   ENTITIES_LIST,
   EXAMPLES_LIST,
+  FEATURES_CARD_LIST,
   MENU_LIST,
   REQUEST_CARD_LIST,
 } from "./models/models.js";
 // utils:
 import { draw, getHTMLFromList } from "./helpers/helpers.js";
 // service classes:
-import Api from "./Api.js";
 import { Menu } from "./service/Menu.js";
+import { Observer } from "./service/Observer.js";
 import { Request } from "./service/Request.js";
 import { UpwardButton } from "./service/UpWardButton.js";
-import { Observer } from "./service/Observer.js";
 
 const FEATURES = document.querySelector("#features");
 const ENTITIES = document.querySelector("#entities");
@@ -58,7 +56,11 @@ draw(DOCUMENTATION, DOCUMENTATION_HTML);
 new UpwardButton({ Component: Components.UPWARD_BTN });
 
 // !Запуск декоратора наблюдателя:
-new Observer(null, document.querySelectorAll(".features-card"), document.querySelectorAll(".request-card"));
+new Observer(
+  null,
+  document.querySelectorAll(".features-card"),
+  document.querySelectorAll(".request-card")
+);
 
 // ! getEntities -----------
 // (async function (endPoint, qs) {
@@ -82,11 +84,10 @@ new Observer(null, document.querySelectorAll(".features-card"), document.querySe
 // (async function (endPoint, body) {
 //   let res = await Api.addEntity(endPoint, body);
 //   console.log(res);
-// })(API_CONSTS.BOOKS, {});
+// })(API_CONSTS.ATHLETES, {fullName: 'foo', sport: 'foo2', country: 'foo3', age: 25});
 
-// ! deleteEntity-----------
-(async function (endPoint, id) {
-  let res = await Api.deleteEntity(endPoint, id);
-  console.log(res);
-})(API_CONSTS.BOOKS, "45");
-
+// // ! deleteEntity-----------
+// (async function (endPoint, id) {
+//   let res = await Api.deleteEntity(endPoint, id);
+//   console.log(res);
+// })(API_CONSTS.BOOKS, "45");
