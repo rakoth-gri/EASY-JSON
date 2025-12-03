@@ -17,7 +17,7 @@ import Api from "./Api.js";
 import { Menu } from "./service/Menu.js";
 import { Request } from "./service/Request.js";
 import { UpwardButton } from "./service/UpWardButton.js";
-import { MyObserver } from "./service/Observer.js";
+import { Observer } from "./service/Observer.js";
 
 const FEATURES = document.querySelector("#features");
 const ENTITIES = document.querySelector("#entities");
@@ -57,8 +57,8 @@ draw(DOCUMENTATION, DOCUMENTATION_HTML);
 // ! Отрисовка навигационной кнопки:
 new UpwardButton({ Component: Components.UPWARD_BTN });
 
-// !Запуск наблюдателя:
-new MyObserver(null, '.features-card');
+// !Запуск декоратора наблюдателя:
+new Observer(null, document.querySelectorAll(".features-card"), document.querySelectorAll(".request-card"));
 
 // ! getEntities -----------
 // (async function (endPoint, qs) {

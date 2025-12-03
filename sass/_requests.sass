@@ -7,7 +7,15 @@
 	background: none
 	border-radius: $app-md-spacing
 	box-shadow: $app-features-card-shadow
-	height: max-content	
+	height: max-content
+	transform: translateX(-30%)
+	opacity: 0
+	transition: all 0.25s linear
+
+	&.active 
+		opacity: 1 
+		transform: translateX(0%)
+	
 
 	h3
 		margin-bottom: 0px
@@ -32,8 +40,8 @@
 		overflow-wrap: anywhere
 		
 		&.doca   
-			padding: $app-md-spacing
-			background-color: $app-success-color
+			padding: $app-md-spacing			
+			box-shadow: $app-features-card-shadow
 			border-radius: $app-sm-spacing
 			display: flex
 			color: $app-white-color			 

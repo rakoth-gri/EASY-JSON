@@ -1,11 +1,12 @@
-// service classes:
-import Components from "./service/Components.js";
-import { Request } from "./service/Request.js";
-import { UpwardButton } from "./service/UpWardButton.js";
 // consts:
 import { REQUEST_CARD_LIST } from "./models/models.js";
 // utils:
 import { draw } from "./helpers/helpers.js";
+// service classes:
+import Components from "./service/Components.js";
+import { Observer } from "./service/Observer.js";
+import { Request } from "./service/Request.js";
+import { UpwardButton } from "./service/UpWardButton.js";
 
 const endPoint = location.search.replace(/^\?endpoint=/, "");
 
@@ -21,7 +22,11 @@ const endPointName = document.querySelector(".endpoint");
 endPointName.textContent = endPoint;
 
 // !Содержимое секции 'urls':
-new Request({list: REQUEST_CARD_LIST, endPoint, Component: 'REQUEST_CARD_DOCS_PAGE'})
+new Request({
+  list: REQUEST_CARD_LIST,
+  endPoint,
+  Component: "REQUEST_CARD_DOCS_PAGE",
+});
 
 // !Содержимое секции 'limiting':
 draw(limiting, Components.LIMITING_DOCA("hostname", endPoint));
@@ -44,4 +49,5 @@ draw(deleteEntity, Components.DELETE_ENTITY_DOCA("hostname", endPoint));
 // ! Отрисовка навигационной кнопки:
 new UpwardButton({ Component: Components.UPWARD_BTN });
 
-
+// !Запуск декоратора наблюдателя:
+new Observer(null, document.querySelectorAll(".request-card"));

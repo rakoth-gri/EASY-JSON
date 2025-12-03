@@ -1,31 +1,29 @@
-class MyObserver {
-  constructor(root, selector) {
-    this.targets = document.querySelectorAll(selector);
+class Observer {
+  constructor(root, ...collections) {
+    this.targets = [];
+    if(!collections.length) throw new Error('the "collections" arg has length = 0...')    
+    collections.forEach(coll => this.targets.push(...coll))
     this.options = {
       root,
       rootMargin: "0px",
       threshold: 0.5,
     };
-    this.observer = new IntersectionObserver(
-      this.featuresObserverCallback,
-      this.options
-    );
-    this.init(this.targets, this.observer);
-    console.log(this);
+    this.observer = new IntersectionObserver(this.callback, this.options);
+    this.init(this.targets, this.observer);    
   }
 
-  featuresObserverCallback = (entries, observer) => {
+  callback = (entries, observer) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
-        entry.target.classList.toggle('active');
+        entry.target.classList.toggle("active");
         observer.unobserve(entry.target);
       }
     });
   };
 
-  init(targets, observer) {
+  init(targets, observer) {    
     targets.forEach((entity) => observer.observe(entity));
   }
 }
 
-export { MyObserver };
+export { Observer };

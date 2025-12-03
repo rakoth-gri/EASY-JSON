@@ -1,14 +1,24 @@
 .requests {
-  border: none;  
+  border: none;
 }
 
 .request-card {
   padding: var(--app-lg-spacing);
-  margin:  0px 0px var(--app-xl-spacing) 0px;
+  margin: 0px 0px var(--app-xl-spacing) 0px;
   border-radius: var(--app-md-spacing);
   background: none;
   box-shadow: var(--app-features-card-shadow);
   height: max-content;
+  transform: translateX(-30%);
+  opacity: 0;
+  transition: all 0.25s linear;
+}
+
+.request-card.active {
+  opacity: 1;
+  -webkit-transform: translateX(0%);
+  -ms-transform: translateX(0%);
+  transform: translateX(0%);
 }
 
 h3 {
@@ -39,10 +49,10 @@ h3 {
 
 .request-card-url.doca {
   padding: var(--app-md-spacing);
-  background-color: var(--app-success-color);
+  box-shadow: var(--app-features-card-shadow);
   border-radius: var(--app-sm-spacing);
   display: flex;
-  color: var(--app-white-color);  
+  color: var(--app-white-color);
 }
 
 .request-card-copybar {
