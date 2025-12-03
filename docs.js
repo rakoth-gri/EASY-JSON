@@ -8,46 +8,49 @@ import { Observer } from "./service/Observer.js";
 import { Request } from "./service/Request.js";
 import { UpwardButton } from "./service/UpWardButton.js";
 
-const endPoint = location.search.replace(/^\?endpoint=/, "");
+try {
+  const endPoint = location.search.replace(/^\?endpoint=/, "");
 
-// Секции и контейнеры:
-const limiting = document.querySelector("#limiting");
-const pagination = document.querySelector("#pagination");
-const selectedFields = document.querySelector("#selectedFields");
-const sorting = document.querySelector("#sorting");
-const addEntity = document.querySelector("#addEntity");
-const deleteEntity = document.querySelector("#deleteEntity");
-const endPointName = document.querySelector(".endpoint");
+  // Секции и контейнеры:
+  const limiting = document.querySelector("#limiting");
+  const pagination = document.querySelector("#pagination");
+  const selectedFields = document.querySelector("#selectedFields");
+  const sorting = document.querySelector("#sorting");
+  const addEntity = document.querySelector("#addEntity");
+  const deleteEntity = document.querySelector("#deleteEntity");
+  const endPointName = document.querySelector(".endpoint");
+  endPointName.textContent = endPoint;
 
-endPointName.textContent = endPoint;
+  // !Содержимое секции 'urls':
+  new Request({
+    list: REQUEST_CARD_LIST,
+    endPoint,
+    Component: "REQUEST_CARD_DOCS_PAGE",
+  });
 
-// !Содержимое секции 'urls':
-new Request({
-  list: REQUEST_CARD_LIST,
-  endPoint,
-  Component: "REQUEST_CARD_DOCS_PAGE",
-});
+  // !Содержимое секции 'limiting':
+  draw(limiting, Components.LIMITING_DOCA("hostname", endPoint));
 
-// !Содержимое секции 'limiting':
-draw(limiting, Components.LIMITING_DOCA("hostname", endPoint));
+  // !Содержимое секции 'pagination':
+  draw(pagination, Components.PAGINATION_DOCA("hostname", endPoint));
 
-// !Содержимое секции 'pagination':
-draw(pagination, Components.PAGINATION_DOCA("hostname", endPoint));
+  // !Содержимое секции 'selectedFields':
+  draw(selectedFields, Components.SELECTEDFIELDS_DOCA("hostname", endPoint));
 
-// !Содержимое секции 'selectedFields':
-draw(selectedFields, Components.SELECTEDFIELDS_DOCA("hostname", endPoint));
+  // !Содержимое секции 'sorting':
+  draw(sorting, Components.SORTING_DOCA("hostname", endPoint));
 
-// !Содержимое секции 'sorting':
-draw(sorting, Components.SORTING_DOCA("hostname", endPoint));
+  // !Содержимое секции 'addEntity':
+  draw(addEntity, Components.ADD_ENTITY_DOCA("hostname", endPoint));
 
-// !Содержимое секции 'addEntity':
-draw(addEntity, Components.ADD_ENTITY_DOCA("hostname", endPoint));
+  // !Содержимое секции 'addEntity':
+  draw(deleteEntity, Components.DELETE_ENTITY_DOCA("hostname", endPoint));
 
-// !Содержимое секции 'addEntity':
-draw(deleteEntity, Components.DELETE_ENTITY_DOCA("hostname", endPoint));
+  // ! Отрисовка навигационной кнопки:
+  new UpwardButton({ Component: Components.UPWARD_BTN });
 
-// ! Отрисовка навигационной кнопки:
-new UpwardButton({ Component: Components.UPWARD_BTN });
-
-// !Запуск декоратора наблюдателя:
-new Observer(null, document.querySelectorAll(".request-card"));
+  // !Запуск декоратора наблюдателя:
+  new Observer(null, document.querySelectorAll(".request-card"));
+} catch (error) {
+  console.warn(error.message, error.name);
+}
