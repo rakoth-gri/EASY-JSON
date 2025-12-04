@@ -8,6 +8,7 @@
   border-radius: var(--app-md-spacing);
   position: relative;
   width: 80%;
+  margin-bottom: 1.5rem;
 }
 
 .header-logo {
@@ -30,6 +31,12 @@
   display: flex;
   list-style-type: none;
   margin: 0px;
+}
+
+.header-menu li {
+  text-transform: uppercase;
+  font-family: inherit;
+  letter-spacing: 1px;
 }
 
 .menu-link.active {

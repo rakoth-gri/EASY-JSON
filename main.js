@@ -8,6 +8,7 @@ import {
   FEATURES_CARD_LIST,
   MENU_LIST,
   REQUEST_CARD_LIST,
+  API_CONSTS
 } from "./models/models.js";
 // utils:
 import { draw, getHTMLFromList } from "./helpers/helpers.js";
@@ -16,6 +17,7 @@ import { Menu } from "./service/Menu.js";
 import { Observer } from "./service/Observer.js";
 import { Request } from "./service/Request.js";
 import { UpwardButton } from "./service/UpWardButton.js";
+import Api from "./service/Api.js";
 
 try {
   const FEATURES = document.querySelector("#features");

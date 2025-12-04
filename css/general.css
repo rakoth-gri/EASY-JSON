@@ -53,6 +53,7 @@ code {
   overflow-y: auto;
   line-height: 140%;
   max-height: 750px;
+  color: var(--app-white-color);
 }
 
 pre code {

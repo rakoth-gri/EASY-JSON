@@ -7,11 +7,8 @@
 
 .h1 {
   width: 100%;
-  margin: var(--app-lg-spacing) 0px;
+  margin: var(--app-lg-spacing) 0px 0px 0px;
   font-size: 1.8em;
-}
-
-.h1.docs {
   text-align: center;
 }
 
@@ -159,6 +156,10 @@
   opacity: 0.87;
   font-size: 0.95em;
   margin: var(--app-md-spacing) 0px;
+}
+
+.note strong {
+  color: var(--app-white-color);
 }
 
 .tooltip {

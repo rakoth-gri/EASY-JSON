@@ -45,14 +45,15 @@ h3 {
   width: 100%;
   text-shadow: 0.3px 0.3px 1px var(--app-light-color);
   overflow-wrap: anywhere;
+  color: var(--app-white-color);
+  font-weight: 400;
 }
 
 .request-card-url.doca {
   padding: var(--app-md-spacing);
   box-shadow: var(--app-features-card-shadow);
   border-radius: var(--app-sm-spacing);
-  display: flex;
-  color: var(--app-white-color);
+  display: flex; 
 }
 
 .request-card-url.doca a {
