@@ -12,7 +12,7 @@ const Requests = {
         });
 
         <span class='danger'>if</span> (!res.<span class='primary'>ok</span>) {
-            <span class='danger'>throw new</span> <span class='purple'>Error</span>('Something got wrong...');
+            <span class='danger'>throw new</span> <span class='purple'>Error</span>('Something went wrong...');
         }
 
         <span class='danger'>return</span> <span class='danger'>await</span> res.<span class='primary'>json()</span>;
@@ -39,7 +39,7 @@ getEntities(<span class='success'>'${endpoint}'</span>);
         });
 
         <span class='danger'>if</span> (!res.<span class='primary'>ok</span>) {
-            <span class='danger'>throw new</span> <span class='purple'>Error</span>('Something got wrong...');
+            <span class='danger'>throw new</span> <span class='purple'>Error</span>('Something went wrong...');
         }
 
         <span class='danger'>return</span> <span class='danger'>await</span> res.<span class='primary'>json()</span>;
@@ -66,7 +66,7 @@ getEntities(<span class='success'>'${endpoint}'</span>, <span class='success'>'p
         });
 
         <span class='danger'>if</span> (!res.<span class='primary'>ok</span>) {
-            <span class='danger'>throw new</span> <span class='purple'>Error</span>('Something got wrong...');
+            <span class='danger'>throw new</span> <span class='purple'>Error</span>('Something went wrong...');
         }
 
         <span class='danger'>return</span> <span class='danger'>await</span> res.<span class='primary'>json()</span>;
@@ -99,7 +99,7 @@ getSearchedEntity(<span class='success'>'${endpoint}'</span>, <span class='succe
         });
 
         <span class='danger'>if</span> (!res.<span class='primary'>ok</span>) {
-            <span class='danger'>throw new</span> <span class='purple'>Error</span>('Something got wrong...');
+            <span class='danger'>throw new</span> <span class='purple'>Error</span>('Something went wrong...');
         }
 
         <span class='danger'>return</span> <span class='danger'>await</span> res.<span class='primary'>json()</span>;
@@ -130,7 +130,7 @@ addEntity(<span class='success'>'${endpoint}'</span>, <span class='success'>newE
         });
 
         <span class='danger'>if</span> (!res.<span class='primary'>ok</span>) {
-            <span class='danger'>throw new</span> <span class='purple'>Error</span>('Something got wrong...');
+            <span class='danger'>throw new</span> <span class='purple'>Error</span>('Something went wrong...');
         }
 
         <span class='danger'>return</span> <span class='danger'>await</span> res.<span class='primary'>json()</span>;
@@ -157,7 +157,7 @@ deleteEntity(<span class='success'>'${endpoint}'</span>, <span class='success'>6
         });
 
         <span class='danger'>if</span> (!res.<span class='primary'>ok</span>) {
-            <span class='danger'>throw new</span> <span class='purple'>Error</span>('Something got wrong...');
+            <span class='danger'>throw new</span> <span class='purple'>Error</span>('Something went wrong...');
         }
 
         <span class='danger'>return</span> <span class='danger'>await</span> res.<span class='primary'>json()</span>;
