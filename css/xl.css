@@ -3,8 +3,7 @@
     font-size: 15px;
   }
 
-  .appContainer,
-  .header {
+  .appContainer {
     width: 100%;
   }
 }

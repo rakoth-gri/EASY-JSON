@@ -1,0 +1,23 @@
+.footer {
+  display: flex;
+  align-items: center;
+  background: var(--app-features-card-bg);
+  padding: var(--app-lg-spacing);
+  border-radius: var(--app-md-spacing) var(--app-md-spacing) 0px 0px;
+  position: relative;
+  font-size: 1.05em;
+  column-gap: var(--app-xl-spacing);
+  position: relative;
+  z-index: 5;
+  box-shadow: var(--app-light-card-shadow); 
+}
+.footer address {
+  align-items: center;
+  display: flex;
+  column-gap: var(--app-sm-spacing);
+}
+
+.material-icons-round {
+  font-size: 1.5em;
+  color: var(--app-warning-color);
+}

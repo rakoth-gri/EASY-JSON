@@ -8,7 +8,6 @@
 .entities-card {
   border-radius: var(--app-md-spacing);
   text-align: center;
-  font-size: 1.1em;
   letter-spacing: 1.5px;
   cursor: pointer;
   width: 31%;
@@ -25,6 +24,7 @@
   width: 100%;
   text-align: left;
   margin: var(--app-md-spacing) 0px 0px;
-  font-size: 0.75em;
+  font-size: 0.8em;
   font-family: "FiraCode";
+  text-transform: lowercase;
 }

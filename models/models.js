@@ -171,12 +171,12 @@ const ENTITIES_LIST = [
   {
     href: `./docs.html?endpoint=books`,
     endpoint: `books`,
-    icon: `<span class="material-icons-round">cloud</span>`,
+    icon: `<span class="material-icons-round">book</span>`,
   },
   {
     href: `./docs.html?endpoint=athletes`,
     endpoint: `athletes`,
-    icon: `<span class="material-icons-round">cloud</span>`,
+    icon: `<span class="material-icons-round">sports_basketball</span>`,
   },
 ];
 
@@ -227,6 +227,10 @@ const MENU_LIST = [
   {
     href: `#documentation`,
     text: `дока`,
+  },
+  {
+    href: `customers`,
+    text: `пользователям`,
   },
 ];
 

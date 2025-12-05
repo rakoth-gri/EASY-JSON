@@ -43,11 +43,11 @@
 /* элементы списков приложения */
 
 .li {
-  margin: var(--app-lg-spacing);
+  margin: var(--app-md-spacing);
   user-select: none;
   font-family: "FiraCode";
   cursor: pointer;
-  font-size: 1.2em;
+  font-size: 1.1em;
   word-break: break-all;
   letter-spacing: 0.7px;
 }

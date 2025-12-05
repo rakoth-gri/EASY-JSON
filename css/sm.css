@@ -15,6 +15,10 @@
     text-align: center;
   }
 
+  .main-nav {
+    min-width: 40%;
+  }
+
   .main-nav .li {
     margin: var(--app-lg-spacing) 0px;
   }

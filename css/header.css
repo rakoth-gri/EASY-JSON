@@ -1,14 +1,12 @@
 .header {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  margin: 0px auto;
+  justify-content: space-between; 
   background: var(--app-advantages-card-bg);
   padding: var(--app-md-spacing);
   border-radius: var(--app-md-spacing);
-  position: relative;
-  width: 80%;
-  margin-bottom: 1.5rem;
+  position: relative; 
+  margin: 0 0 1.5rem 0;
 }
 
 .header-logo {

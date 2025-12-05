@@ -15,7 +15,9 @@ class Components {
         ${getHTMLFromList(
           list,
           ({ href, text }) =>
-            `<li class="li"><a id="${href}" class="menu-link">${text}</a></li>`
+            `<li class="li"><a ${
+              href === "customers" ? `href='./${href}.html'` : `id="${href}"`
+            } class="menu-link">${text}</a></li>`
         )}
         
       </ul>
@@ -283,5 +285,3 @@ class Components {
 }
 
 export default new Components();
-
-      

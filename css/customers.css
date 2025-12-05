@@ -1,0 +1,22 @@
+#customers cite {
+  width: 100%;
+  display: inline-block;
+  text-align: right;
+}
+
+#customers p {
+  margin: var(--app-md-spacing) 0px;
+}
+
+#customers-info {
+  margin: var(--app-lg-spacing) 0px;
+  font-style: italic;
+  font-size: 1.25em;
+  line-height: 150%;
+  font-family: "Georgia", serif;
+  padding: 0.5rems;
+}
+
+#customers-info q {
+  display: inline-block;
+}
