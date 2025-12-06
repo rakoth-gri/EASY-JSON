@@ -178,6 +178,11 @@ const ENTITIES_LIST = [
     endpoint: `athletes`,
     icon: `<span class="material-icons-round">sports_basketball</span>`,
   },
+  {
+    href: `./docs.html?endpoint=videoGames`,
+    endpoint: `videoGames`,
+    icon: `<span class="material-icons-round">gamepad</span>`,
+  },
 ];
 
 const EXAMPLES_LIST = [
@@ -243,6 +248,10 @@ const DOCUMENTATION_LIST = [
     href: `./docs.html?endpoint=athletes`,
     text: `<div class="icon-box"><span class="material-icons-round">description</span></div> Документация <em style="font-weight:bold;">athletes</em>`,
   },
+  {
+    href: `./docs.html?endpoint=videoGames`,
+    text: `<div class="icon-box"><span class="material-icons-round">description</span></div> Документация <em style="font-weight:bold;">videoGames</em>`,
+  },
 ];
 
 const SORTING_WHITE_LIST = {
@@ -284,6 +293,19 @@ const SORTING_WHITE_LIST = {
     "hobbies",
     "lastUpdated",
   ],
+  videoGames: [
+    "id",
+    "title",
+    "developer",
+    "publisher",
+    "releaseDate",
+    "genre",
+    "ageRating",
+    "price",
+    "description",
+    "setting",
+    "lastUpdated",
+  ],
 };
 
 const POST_REQUIRED_FIELDS = {
@@ -317,6 +339,24 @@ const POST_REQUIRED_FIELDS = {
     {
       field: "genre",
       type: "string",
+    },
+  ],
+  videoGames: [
+    {
+      field: "title",
+      type: "string",
+    },
+    {
+      field: "genre",
+      type: "string",
+    },
+    {
+      field: "ageRating",
+      type: "string",
+    },
+    {
+      field: "price",
+      type: "integer",
     },
   ],
 };
