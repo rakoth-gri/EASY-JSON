@@ -26,22 +26,22 @@ class Menu {
   }
 
   addListenerToHeaderHandler = (e) => {
-    if (e.target.closest(".burger")) {
-      this.$mainNav.classList.toggle("active");      
-    }
-    else if (!e.target.matches(".menu-link")) {
+    if (e.target.href) {
+      return;
+    } else if (e.target.closest(".burger")) {
+      this.$mainNav.classList.toggle("active");
+    } else if (!e.target.matches(".menu-link")) {
       this.$mainNav.classList.remove("active");
-    }
-    else {
+    } else {
       const { id } = e.target;
       document.querySelector(id).scrollIntoView({
         behavior: "smooth",
-        block: 'start',
+        block: "start",
         inline: "nearest",
       });
       this.hilightChosenLink(this.menuLinks, e.target);
       this.$mainNav.classList.toggle("active");
-    }   
+    }
   };
 
   hilightChosenLink(links, link) {

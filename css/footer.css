@@ -5,7 +5,7 @@
   padding: var(--app-lg-spacing);
   border-radius: var(--app-md-spacing) var(--app-md-spacing) 0px 0px;
   position: relative;
-  font-size: 1.05em;
+  font-size: 1em;
   column-gap: var(--app-xl-spacing);
   position: relative;
   z-index: 5;
