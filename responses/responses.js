@@ -939,7 +939,7 @@ const Responses = {
     title: "Battlefield™",
     developer: "Battlefield Studios",
     publisher: 'Electronic Arts',
-    s: '2025-10-10',
+    releaseDate: '2025-10-10',
     genre: 'Экшены',
     platforms: <span class='purple'>[</span>"ПК", "PlayStation 5", "Xbox Series X|S"<span class='purple'>]</span>,
     ageRating: null,
