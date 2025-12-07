@@ -100,5 +100,5 @@
 
 .btn-entity:hover {
   background: none;
-  color: var(--app-success-color);
+  color: var(--app-warning-color);
 }

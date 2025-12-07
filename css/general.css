@@ -67,7 +67,7 @@ p {
 }
 
 dfn,
-em {
+em, address {
   font-style: normal;
 }
 
@@ -85,6 +85,13 @@ ol {
   padding: var(--app-md-spacing);
 }
 
+address {
+  letter-spacing: inherit;
+	text-transform: none;
+	font-size: inherit;
+}
+	
+	
 a {
   text-decoration: none;
   color: inherit;

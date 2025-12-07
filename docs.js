@@ -18,6 +18,7 @@ try {
   const sorting = document.querySelector("#sorting");
   const addEntity = document.querySelector("#addEntity");
   const deleteEntity = document.querySelector("#deleteEntity");
+  const FOOTER = document.querySelector(".footer");
   const endPointName = document.querySelector(".endpoint");
   endPointName.textContent = endPoint;
 
@@ -48,6 +49,9 @@ try {
 
   // ! Отрисовка навигационной кнопки:
   new UpwardButton({ Component: Components.UPWARD_BTN });
+
+  // !Отрисовка Подвала:
+  draw(FOOTER, Components.FOOTER());
 
   // !Запуск декоратора наблюдателя:
   new Observer(null, document.querySelectorAll(".request-card"));

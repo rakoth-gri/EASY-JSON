@@ -125,6 +125,7 @@
   text-transform: none;
   letter-spacing: 1px;
   border-radius: var(--app-sm-spacing);
+  padding: var(--app-sm-spacing);
 }
 
 .upwardBtn {

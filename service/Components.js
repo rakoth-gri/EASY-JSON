@@ -44,7 +44,7 @@ class Components {
         <p class="note">
             <span class="danger">&#10071;</span>Переменная \${endpoint} представляет
             доступные в API ресурсы:<span class="warning">
-            'athletes', 'books'</span>.
+            'athletes', 'books', 'videoGames', ...</span>.
         </p>
         <p class="note">
             <span class="danger">&#10071;</span>Переменная \${value} представляет значения
@@ -281,6 +281,17 @@ class Components {
           <span class="material-icons-round">arrow_upward</span>
         </div>        
         `;
+  }
+  FOOTER() {
+    return `
+      <a href="mailto:mail@easyjson.ru?body=привет" class="footer-link">
+        <em>поддержка, донаты: </em>
+        <address>
+          <span class="material-icons-round"> mail_outline </span>
+          <span>mail@easy-json.ru</span>
+        </address>
+      </a>
+    `;
   }
 }
 

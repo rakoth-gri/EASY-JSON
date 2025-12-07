@@ -2,28 +2,29 @@
 import Components from "./service/Components.js";
 // consts:
 import {
+  API_CONSTS,
   DOCUMENTATION_LIST,
   ENTITIES_LIST,
   EXAMPLES_LIST,
   FEATURES_CARD_LIST,
   MENU_LIST,
   REQUEST_CARD_LIST,
-  API_CONSTS
 } from "./models/models.js";
 // utils:
 import { draw, getHTMLFromList } from "./helpers/helpers.js";
 // service classes:
+import Api from "./service/Api.js";
 import { Menu } from "./service/Menu.js";
 import { Observer } from "./service/Observer.js";
 import { Request } from "./service/Request.js";
 import { UpwardButton } from "./service/UpWardButton.js";
-import Api from "./service/Api.js";
 
 try {
   const FEATURES = document.querySelector("#features");
   const ENTITIES = document.querySelector("#entities");
   const EXAMPLES = document.querySelector("#examples ol");
   const DOCUMENTATION = document.querySelector("#documentation ul");
+  const FOOTER = document.querySelector(".footer");
 
   // Отрисовка главного меню:
   new Menu({ list: MENU_LIST, Component: Components.MENU });
@@ -58,6 +59,9 @@ try {
   // ! Отрисовка навигационной кнопки:
   new UpwardButton({ Component: Components.UPWARD_BTN });
 
+  // !Отрисовка Подвала:
+  draw(FOOTER, Components.FOOTER());
+
   // !Запуск декоратора наблюдателя:
   new Observer(
     null,
@@ -69,25 +73,28 @@ try {
   (async function (endPoint, qs) {
     let res = await Api.getEntities(endPoint, qs);
     console.log(res);
-  })(API_CONSTS.ATHLETES, "select=fullName,zodiacSign,instagramFollowers");
+  })(
+    API_CONSTS.ATHLETES,
+    "select=fullName,zodiacSign,instagramFollowers,annualSalary&sort=annualSalary:desc&limit=7&page=5"
+  );
 
   // ! getSingleEntity -----------
   // (async function (endPoint, id) {
   //   let res = await Api.getSingleEntity(endPoint, id);
   //   console.log(res);
-  // })(API_CONSTS.BOOKS, "44");
+  // })(API_CONSTS.BOOKS, "300");
 
   // ! getSearchedEntity -----------
   // (async function (endPoint, q) {
   //   let res = await Api.getSearchedEntity(endPoint, q);
   //   console.log(res);
-  // })(API_CONSTS.BOOKS, "поттер");
+  // })(API_CONSTS.BOOKS, "преступление");
 
   // ! addEntity -----------
   // (async function (endPoint, body) {
   //   let res = await Api.addEntity(endPoint, body);
   //   console.log(res);
-  // })(API_CONSTS.ATHLETES, {fullName: 'foo', sport: 'foo2', country: 'foo3', age: 25});
+  // })(API_CONSTS.ATHLETES, {fullNme: 'foo', sport: 'foo2', country: 'foo3', age: 25});
 
   //  ! deleteEntity-----------
   // (async function (endPoint, id) {
