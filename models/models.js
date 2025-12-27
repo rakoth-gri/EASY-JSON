@@ -2,6 +2,8 @@ const API_CONSTS = {
   HOST: "185.104.248.25:3000",
   BOOKS: "books",
   ATHLETES: "athletes",
+  VIDEOGAMES: "videoGames",
+  CARS: "cars",
   SEARCH: "search",
 };
 
@@ -183,6 +185,16 @@ const ENTITIES_LIST = [
     endpoint: `videoGames`,
     icon: `<span class="material-icons-round">gamepad</span>`,
   },
+  {
+    href: `./docs.html?endpoint=movies`,
+    endpoint: `movies`,
+    icon: `<span class="material-icons-round">movie_creation</span>`,
+  },
+  {
+    href: `./docs.html?endpoint=cars`,
+    endpoint: `cars`,
+    icon: `<span class="material-icons-round">directions_car</span>`,
+  },
 ];
 
 const EXAMPLES_LIST = [
@@ -252,6 +264,14 @@ const DOCUMENTATION_LIST = [
     href: `./docs.html?endpoint=videoGames`,
     text: `<div class="icon-box"><span class="material-icons-round">description</span></div> Документация <em style="font-weight:bold;">videoGames</em>`,
   },
+  {
+    href: `./docs.html?endpoint=movies`,
+    text: `<div class="icon-box"><span class="material-icons-round">description</span></div> Документация <em style="font-weight:bold;">movies</em>`,
+  },
+  {
+    href: `./docs.html?endpoint=cars`,
+    text: `<div class="icon-box"><span class="material-icons-round">description</span></div> Документация <em style="font-weight:bold;">cars</em>`,
+  },
 ];
 
 const SORTING_WHITE_LIST = {
@@ -306,6 +326,41 @@ const SORTING_WHITE_LIST = {
     "setting",
     "lastUpdated",
   ],
+  movies: [
+    "id",
+    "title",
+    "originalTitle",
+    "releaseYear",
+    "duration",
+    "country",
+    "language",
+    "director",
+    "ageRating",
+    "budget",
+    "boxOffice",
+    "imdb",
+    "kinopoiskRating",
+    "description",
+    "studio",
+    "seasons",
+    "lastUpdated",
+  ],
+  cars: [
+    "id",
+    "brand",
+    "model",
+    "country",
+    "modelYear",
+    "transmissionType",
+    "basePrice",
+    "segment",
+    "licenseCategory",
+    "annualProduction",
+    "topSales",
+    "euroStandart",
+    "headlights",
+    "lastUpdated",
+  ],
 };
 
 const POST_REQUIRED_FIELDS = {
@@ -356,6 +411,42 @@ const POST_REQUIRED_FIELDS = {
     },
     {
       field: "price",
+      type: "integer",
+    },
+  ],
+  movies: [
+    {
+      field: "title",
+      type: "string",
+    },
+    {
+      field: "country",
+      type: "string",
+    },
+    {
+      field: "ageRating",
+      type: "string",
+    },
+    {
+      field: "releaseYear",
+      type: "integer",
+    },
+  ],
+  cars: [
+    {
+      field: "brand",
+      type: "string",
+    },
+    {
+      field: "model",
+      type: "string",
+    },
+    {
+      field: "country",
+      type: "string",
+    },
+    {
+      field: "modelYear",
       type: "integer",
     },
   ],
