@@ -9,12 +9,6 @@
     padding: var(--app-sm-spacing) 0px;
   }
 
-  .slogan {
-    width: 65%;
-    padding: 1rem;
-    text-align: center;
-  }
-
   .main-nav {
     min-width: 40%;
   }
@@ -60,9 +54,5 @@
   .icon-box,
   .back .btn {
     padding: var(--app-sm-spacing);
-  }
-
-  .section-text {
-    margin: var(--app-md-spacing) 0px;
   }
 }

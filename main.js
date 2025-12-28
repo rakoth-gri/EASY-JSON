@@ -75,7 +75,7 @@ try {
     console.log(res);
   })(
     API_CONSTS.ATHLETES,
-    "select=fullName,zodiacSign,instagramFollowers,annualSalary&sort=annualSalary:desc&limit=7&page=5"
+    "limit=foo&page=bazz"
   );
 
   // ! getSingleEntity -----------

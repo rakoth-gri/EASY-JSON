@@ -50,6 +50,7 @@
   font-size: 1.1em;
   word-break: break-all;
   letter-spacing: 0.7px;
+  font-variant: small-caps;
 }
 
 .li > a {
@@ -153,9 +154,7 @@
 
 /* Примечание */
 
-.note {
-  opacity: 0.87;
-  font-size: 0.95em;
+.note {  
   margin: var(--app-md-spacing) 0px;
 }
 

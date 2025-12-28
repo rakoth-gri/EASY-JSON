@@ -6,8 +6,6 @@
   font-size: 1em;
   position: relative;
   z-index: 5;
-  opacity: 0.85;
-  color: var(--app-white-color);
 }
 
 .footer-link {
