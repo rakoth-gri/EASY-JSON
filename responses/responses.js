@@ -818,7 +818,7 @@ const Responses = {
         engineTypes: <span class='purple'>[</span>"электрический"<span class='purple'>]</span>,
         bodyType: <span class='purple'>[</span>"седан"<span class='purple'>]</span>,
         transmissionType: 'автоматическая',
-        basePrice: 35000.00,
+        basePrice: 45050.84,
         enginePowerList: <span class='purple'>{</span>"Н·м": 375, "л.с.": 283 <span class='purple'>}</span>, 
         segment: 'премиум',
         licenseCategory: 'B',
@@ -846,7 +846,7 @@ const Responses = {
     engineTypes: <span class='purple'>[</span>"турбо", "дизель"<span class='purple'>]</span>,
     bodyType: <span class='purple'>[</span>"внедорожник", "кроссовер"<span class='purple'>]</span>,
     transmissionType: 'автоматическая',
-    basePrice: 65000.00,
+    basePrice: 83665.85,
     enginePowerList: <span class='purple'>{</span>"Н·м": 450, "л.с.": 340<span class='purple'>}</span>, 
     segment: 'премиум',
     licenseCategory: 'B',
@@ -869,7 +869,7 @@ const Responses = {
         engineTypes: <span class='purple'>[</span>"турбо", "дизель"<span class='purple'>]</span>,
         bodyType: <span class='purple'>[</span>"внедорожник", "кроссовер"<span class='purple'>]</span>,
         transmissionType: 'автоматическая',
-        basePrice: 65000.00,
+        basePrice: 83665.85,
         enginePowerList: <span class='purple'>{</span>"Н·м": 450, "л.с.": 340<span class='purple'>}</span>, 
         segment: 'премиум',
         licenseCategory: 'B',
@@ -895,8 +895,8 @@ const Responses = {
     id: 31,
     brand: "Subaru", <span class="danger">*</span> 
     model: "Outback", <span class="danger">*</span>
-    country: '16+', <span class="danger">*</span>
-    modelYear: 2025, <span class="danger">*</span>
+    country: 'Япония', <span class="danger">*</span>
+    modelYear: 2024, <span class="danger">*</span>
     licenseCategory: 'B',
     headlights: 'светодиодные',
     bodyType: ["кроссовер"],         
@@ -915,7 +915,7 @@ const Responses = {
     engineTypes: <span class='purple'>[</span>"электрический"<span class='purple'>]</span>,
     bodyType: <span class='purple'>[</span>"седан"<span class='purple'>]</span>,
     transmissionType: 'автоматическая',
-    basePrice: 35000.00,
+    basePrice: 45050.84,
     enginePowerList: <span class='purple'>{</span>"Н·м": 375, "л.с.": 283 <span class='purple'>}</span>, 
     segment: 'премиум',
     licenseCategory: 'B',
