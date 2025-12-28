@@ -3,6 +3,7 @@ const API_CONSTS = {
   BOOKS: "books",
   ATHLETES: "athletes",
   VIDEOGAMES: "videoGames",
+  MOVIES: 'movies',
   CARS: "cars",
   SEARCH: "search",
 };
