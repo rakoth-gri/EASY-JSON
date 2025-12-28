@@ -70,37 +70,37 @@ try {
   );
 
   // ! getEntities -----------
-  (async function (endPoint, qs) {
-    let res = await Api.getEntities(endPoint, qs);
-    console.log(res);
-  })(
-    API_CONSTS.ATHLETES,
-    "limit=foo&page=bazz"
-  );
+  // (async function (endPoint, qs) {
+  //   let res = await Api.getEntities(endPoint, qs);
+  //   console.log(res);
+  // })(
+  //   API_CONSTS.MOVIES,
+  //   "limit=100&select=title,id,director,title&sort=director:asc"
+  // );
 
   // ! getSingleEntity -----------
-  // (async function (endPoint, id) {
-  //   let res = await Api.getSingleEntity(endPoint, id);
-  //   console.log(res);
-  // })(API_CONSTS.BOOKS, "300");
+  (async function (endPoint, id) {
+    let res = await Api.getSingleEntity(endPoint, id);
+    console.log(res);
+  })(API_CONSTS.MOVIES, '22');
 
   // ! getSearchedEntity -----------
   // (async function (endPoint, q) {
   //   let res = await Api.getSearchedEntity(endPoint, q);
   //   console.log(res);
-  // })(API_CONSTS.BOOKS, "преступление");
+  // })(API_CONSTS.MOVIES, "бэтмен");
 
   // ! addEntity -----------
   // (async function (endPoint, body) {
   //   let res = await Api.addEntity(endPoint, body);
   //   console.log(res);
-  // })(API_CONSTS.ATHLETES, {fullNme: 'foo', sport: 'foo2', country: 'foo3', age: 25});
+  // })(API_CONSTS.MOVIES, {title: 'FOO', country: 'Япония', ageRating: '18+', releaseYear: '1990', kinopoiskRating: 8, seasons: "25", description: 25});
 
   //  ! deleteEntity-----------
   // (async function (endPoint, id) {
   //   let res = await Api.deleteEntity(endPoint, id);
   //   console.log(res);
-  // })(API_CONSTS.BOOKS, "45");
+  // })(API_CONSTS.MOVIES, 45);
 } catch (error) {
   console.warn(error.message, error.name);
 }
