@@ -2,6 +2,7 @@ import {
   POST_REQUIRED_FIELDS,
   SORTING_WHITE_LIST,
   URLS,
+  API_CONSTS  
 } from "../models/models.js";
 // helpers:
 import { getHTMLFromList } from "../helpers/helpers.js";
@@ -70,7 +71,7 @@ class Components {
         ${icon}
         ${endpoint} 
         <span class="entities-card-url"> ${URLS.getEntities(
-          "hostname",
+          API_CONSTS.HOST,
           endpoint
         )} </span>       
         </button>

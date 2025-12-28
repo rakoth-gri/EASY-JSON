@@ -3,7 +3,7 @@ import { API_CONSTS } from "../models/models.js";
 class Api {
   static async getEntities(endpoint, qs = "") {
     try {
-      let res = await fetch(`http://${API_CONSTS.HOST}/${endpoint}?${qs}`, {
+      let res = await fetch(`${API_CONSTS.PROTOCOL}://${API_CONSTS.HOST}/${endpoint}?${qs}`, {
         headers: {
           "Content-Type": "application/json",
         },
@@ -20,7 +20,7 @@ class Api {
 
   static async getSingleEntity(endpoint, id = "") {
     try {
-      let res = await fetch(`http://${API_CONSTS.HOST}/${endpoint}/${id}`, {
+      let res = await fetch(`${API_CONSTS.PROTOCOL}://${API_CONSTS.HOST}/${endpoint}/${id}`, {
         headers: {
           "Content-Type": "application/json",
         },
@@ -39,7 +39,7 @@ class Api {
   static async getSearchedEntity(endpoint, q) {
     try {
       let res = await fetch(
-        `http://${API_CONSTS.HOST}/${endpoint}?q=${q}`,
+        `${API_CONSTS.PROTOCOL}://${API_CONSTS.HOST}/${endpoint}?q=${q}`,
         {
           headers: {
             "Content-Type": "application/json",
@@ -58,7 +58,7 @@ class Api {
 
   static async addEntity(endpoint, body) {
     try {
-      let res = await fetch(`http://${API_CONSTS.HOST}/${endpoint}`, {
+      let res = await fetch(`${API_CONSTS.PROTOCOL}://${API_CONSTS.HOST}/${endpoint}`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -77,7 +77,7 @@ class Api {
 
   static async deleteEntity(endpoint, id) {
     try {
-      let res = await fetch(`http://${API_CONSTS.HOST}/${endpoint}/${id}`, {
+      let res = await fetch(`${API_CONSTS.PROTOCOL}://${API_CONSTS.HOST}/${endpoint}/${id}`, {
         method: "DELETE",
         headers: {
           "Content-Type": "application/json",
