@@ -1,23 +1,27 @@
 const API_CONSTS = {
-  PROTOCOL: 'https',
+  PROTOCOL: "https",
   HOST: "dummy.chromiusj.ru",
   BOOKS: "books",
   ATHLETES: "athletes",
   VIDEOGAMES: "videoGames",
-  MOVIES: 'movies',
+  MOVIES: "movies",
   CARS: "cars",
   SEARCH: "search",
 };
 
 const URLS = {
-  getEntities: (host, ep = "${endpoint}") => `${API_CONSTS.PROTOCOL}://${host}/${ep}`,
+  getEntities: (host, ep = "${endpoint}") =>
+    `${API_CONSTS.PROTOCOL}://${host}/${ep}`,
   getEntitiesQS: (host, ep = "${endpoint}") =>
     `${API_CONSTS.PROTOCOL}://${host}/${ep}?page=\${value}&limit=\${value}`,
-  getSingleEntity: (host, ep = "${endpoint}") => `${API_CONSTS.PROTOCOL}://${host}/${ep}/\${id}`,
+  getSingleEntity: (host, ep = "${endpoint}") =>
+    `${API_CONSTS.PROTOCOL}://${host}/${ep}/\${id}`,
   getSearchedEntity: (host, ep = "${endpoint}") =>
     `${API_CONSTS.PROTOCOL}://${host}/${ep}?q=\${value}`,
-  addEntity: (host, ep = "${endpoint}") => `${API_CONSTS.PROTOCOL}://${host}/${ep}`,
-  deleteEntity: (host, ep = "${endpoint}") => `${API_CONSTS.PROTOCOL}://${host}/${ep}/\${id}`,
+  addEntity: (host, ep = "${endpoint}") =>
+    `${API_CONSTS.PROTOCOL}://${host}/${ep}`,
+  deleteEntity: (host, ep = "${endpoint}") =>
+    `${API_CONSTS.PROTOCOL}://${host}/${ep}/\${id}`,
   getLimitedEntities: (host, ep = "${endpoint}") =>
     `${API_CONSTS.PROTOCOL}://${host}/${ep}?limit=10`,
   getPaginatedEntities: (host, ep = "${endpoint}") =>
