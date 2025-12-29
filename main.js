@@ -73,28 +73,30 @@ try {
   (async function (endPoint, qs) {
     let res = await Api.getEntities(endPoint, qs);
     console.log(res);
-  })(
-    API_CONSTS.MOVIES,
-    "limit=100&select=title,id,director,title&sort=director:asc"
-  );
+  })(API_CONSTS.MOVIES, "page=foo&select=title,id,title&sort=title:asc");
 
   // ! getSingleEntity -----------
   // (async function (endPoint, id) {
   //   let res = await Api.getSingleEntity(endPoint, id);
   //   console.log(res);
-  // })(API_CONSTS.MOVIES, '22');
+  // })(API_CONSTS.MOVIES, '455');
 
   // ! getSearchedEntity -----------
-  // (async function (endPoint, q) {
-  //   let res = await Api.getSearchedEntity(endPoint, q);
-  //   console.log(res);
-  // })(API_CONSTS.MOVIES, "бэтмен");
+  (async function (endPoint, q) {
+    let res = await Api.getSearchedEntity(endPoint, q);
+    console.log(res);
+  })(API_CONSTS.MOVIES, "Тарковский");
 
   // ! addEntity -----------
-  // (async function (endPoint, body) {
-  //   let res = await Api.addEntity(endPoint, body);
-  //   console.log(res);
-  // })(API_CONSTS.MOVIES, {title: 'FOO', country: 'Япония', ageRating: '18+', releaseYear: '1990', kinopoiskRating: 8, seasons: "25", description: 25});
+  (async function (endPoint, body) {
+    let res = await Api.addEntity(endPoint, body);
+    console.log(res);
+  })(API_CONSTS.BOOKS, {
+    title: "FOO",
+    country: "Япония",
+    ageRating: "18+",
+    releaseYear: "1990",
+  });
 
   //  ! deleteEntity-----------
   // (async function (endPoint, id) {
