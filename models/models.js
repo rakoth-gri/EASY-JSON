@@ -4,6 +4,7 @@ const API_CONSTS = {
   BOOKS: "books",
   ATHLETES: "athletes",
   VIDEOGAMES: "videoGames",
+  CARS: 'cars',
   MOVIES: "movies",
   DOCS: "docs",
   AUTH: 'auth',  
