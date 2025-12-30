@@ -70,12 +70,8 @@ class Components {
         <button class="btn btn-entity">
         ${icon}
         ${endpoint} 
-        <span class="entities-card-url"> ${URLS.getEntities(
-          API_CONSTS.HOST,
-          endpoint
-        )} </span>       
-        </button>
-        
+        <span class="entities-card-url"> /${endpoint} </span>       
+        </button>        
     </a>
     `;
   EXAMPLES_LINK = ({ href, text }) => `

@@ -5,8 +5,8 @@ const API_CONSTS = {
   ATHLETES: "athletes",
   VIDEOGAMES: "videoGames",
   MOVIES: "movies",
-  CARS: "cars",
-  SEARCH: "search",
+  DOCS: "docs",
+  AUTH: 'auth',  
 };
 
 const URLS = {
@@ -134,7 +134,7 @@ const REQUEST_CARD_LIST = [
 const FEATURES_CARD_LIST = [
   {
     icon: `<span class="material-icons-round">http</span>`,
-    text: `Возможность запрашивать разные по тематике данные: книги, спорт и многое другое!`,
+    text: `Возможность запрашивать разные по тематике данные: книги, спорт, автомобили и др.!`,
     title: "Многообразие эндпоинтов",
   },
   {
@@ -173,33 +173,43 @@ const FEATURES_CARD_LIST = [
     text: `Для каждой сущности реализован поиск по множеству полей.`,
     title: "Удобный поиск",
   },
+  {
+    icon: `<span class="material-icons-round">integration_instructions</span>`,
+    text: `Нагладный единый источник описания всех сущностей API`,
+    title: "Swagger Документация",
+  },
 ];
 
 const ENTITIES_LIST = [
   {
-    href: `./docs.html?endpoint=books`,
-    endpoint: `books`,
+    href: `./docs.html?endpoint=${API_CONSTS.BOOKS}`,
+    endpoint: API_CONSTS.BOOKS,
     icon: `<span class="material-icons-round">book</span>`,
   },
   {
-    href: `./docs.html?endpoint=athletes`,
-    endpoint: `athletes`,
+    href: `./docs.html?endpoint=${API_CONSTS.ATHLETES}`,
+    endpoint: API_CONSTS.ATHLETES,
     icon: `<span class="material-icons-round">sports_basketball</span>`,
   },
   {
-    href: `./docs.html?endpoint=videoGames`,
-    endpoint: `videoGames`,
+    href: `./docs.html?endpoint=${API_CONSTS.VIDEOGAMES}`,
+    endpoint: API_CONSTS.VIDEOGAMES,
     icon: `<span class="material-icons-round">gamepad</span>`,
   },
   {
-    href: `./docs.html?endpoint=movies`,
-    endpoint: `movies`,
+    href: `./docs.html?endpoint=${API_CONSTS.MOVIES}`,
+    endpoint: API_CONSTS.MOVIES,
     icon: `<span class="material-icons-round">movie_creation</span>`,
   },
   {
-    href: `./docs.html?endpoint=cars`,
-    endpoint: `cars`,
+    href: `./docs.html?endpoint=${API_CONSTS.CARS}`,
+    endpoint: API_CONSTS.CARS,
     icon: `<span class="material-icons-round">directions_car</span>`,
+  },
+  {
+    href: `${API_CONSTS.PROTOCOL}://${API_CONSTS.HOST}/${API_CONSTS.DOCS}`,
+    endpoint: API_CONSTS.DOCS,
+    icon: `<span class="material-icons-round" style='color: #1c963c;'>integration_instructions</span>`,
   },
 ];
 
