@@ -58,6 +58,11 @@ h3 {
   width: 100%;
 }
 
+.request-card-url.doca a:hover {
+  color: var(--app-warning-color);
+  transform: scale(1.01);
+}
+
 .request-card-copybar {
   padding: var(--app-md-spacing);
   display: flex;

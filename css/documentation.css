@@ -10,7 +10,3 @@
   column-gap: var(--app-md-spacing);
 }
 
-#documentation a:hover {
-  color: var(--app-warning-color);
-  transform: scale(1.01);
-}

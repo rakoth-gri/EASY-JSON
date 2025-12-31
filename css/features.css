@@ -71,6 +71,7 @@
 
 .features-card:hover {
   transform: translateY(-0.5rem);
+  background: none;
 }
 
 .features-card-hr {

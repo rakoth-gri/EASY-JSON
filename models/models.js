@@ -175,8 +175,8 @@ const FEATURES_CARD_LIST = [
     title: "Удобный поиск",
   },
   {
-    icon: `<span class="material-icons-round">integration_instructions</span>`,
-    text: `Нагладный единый источник описания всех сущностей API`,
+    icon: `<span class="material-icons-round" style='color: #1c963c;'>integration_instructions</span>`,
+    text: `Наглядный единый источник описания всех сущностей API`,
     title: "Swagger Документация",
   },
 ];

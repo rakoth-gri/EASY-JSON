@@ -69,7 +69,7 @@ class Components {
     <a class="entities-card" href="${href}">
         <button class="btn btn-entity">
         ${icon}
-        ${endpoint} 
+        ${endpoint !== 'docs' ? endpoint : 'swagger'} 
         <span class="entities-card-url"> /${endpoint} </span>       
         </button>        
     </a>
@@ -120,11 +120,7 @@ class Components {
         </div>                  
     </article>`;
   }
-  NOTE_DOCS_PAGE = () => `
-    <p class="note">
-        <span class="danger">*</span> Минимально необходимые поля для передачи в параметре <strong>body</strong>. 
-    </p>
-    `;
+
   URL_CARD_TRIGGERS({ id, req, res, err, ReqBtn, ResBtn, ErrBtn }) {
     return `
             <div class="request-card-triggers">
