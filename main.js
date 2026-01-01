@@ -77,7 +77,7 @@ try {
   (async function (endPoint, qs) {
     let res = await Api.getEntities(endPoint, qs);
     console.log(res);
-  })(API_CONSTS.MOVIES, "page=foo&select=title,id,title&sort=title:asc");
+  })(API_CONSTS.MOVIES, "page=1&select=title,id,title&sort=title:asc");
 
   // ! getSingleEntity -----------
   // (async function (endPoint, id) {
@@ -86,21 +86,21 @@ try {
   // })(API_CONSTS.MOVIES, '455');
 
   // ! getSearchedEntity -----------
-  (async function (endPoint, q) {
-    let res = await Api.getSearchedEntity(endPoint, q);
-    console.log(res);
-  })(API_CONSTS.MOVIES, "Тарковский");
+  // (async function (endPoint, q) {
+  //   let res = await Api.getSearchedEntity(endPoint, q);
+  //   console.log(res);
+  // })(API_CONSTS.MOVIES, "Тарковский");
 
   // ! addEntity -----------
-  (async function (endPoint, body) {
-    let res = await Api.addEntity(endPoint, body);
-    console.log(res);
-  })(API_CONSTS.BOOKS, {
-    title: "FOO",
-    country: "Япония",
-    ageRating: "18+",
-    releaseYear: "1990",
-  });
+  // (async function (endPoint, body) {
+  //   let res = await Api.addEntity(endPoint, body);
+  //   console.log(res);
+  // })(API_CONSTS.BOOKS, {
+  //   title: "FOO",
+  //   ageRating: "18+",
+  //   genre: "роман, сатира, эротика",
+  //   author: "Haily Dick",
+  // });
 
   //  ! deleteEntity-----------
   // (async function (endPoint, id) {
