@@ -55,4 +55,13 @@
   .back .btn {
     padding: var(--app-sm-spacing);
   }
+
+  .upwardBtn {
+    width: 38px;
+    height: 38px;
+  }
+
+  .upwardBtn .material-icons-round {
+    font-size: 1.45rem;
+  }
 }

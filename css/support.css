@@ -1,0 +1,28 @@
+.support {
+  padding: var(--app-md-spacing);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.support .btn {
+  align-items: center;
+  padding: var(--app-lg-spacing);
+  letter-spacing: 1.5px;
+  font-variant: small-caps;
+  background: var(--app-danger-card-bg);
+  color: var(--app-white-color);
+  box-shadow: var(--app-light-card-shadow);
+}
+
+.support .btn:hover {
+  color: var(--app-warning-color);
+  background: var(--app-dark-color);
+}
+
+.support .material-icons-round {
+  font-variant: normal;
+  font-size: 1.5em;
+  margin-right: var(--app-md-spacing);
+  color: var(--app-warning-color);
+}

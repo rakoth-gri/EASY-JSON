@@ -2,7 +2,6 @@ import {
   POST_REQUIRED_FIELDS,
   SORTING_WHITE_LIST,
   URLS,
-  API_CONSTS  
 } from "../models/models.js";
 // helpers:
 import { getHTMLFromList } from "../helpers/helpers.js";
@@ -18,7 +17,7 @@ class Components {
           ({ href, text }) =>
             `<li class="li"><a ${
               href === "customers" ? `href='./${href}.html'` : `id="${href}"`
-            } class="menu-link">${text}</a></li>`
+            } class="menu-link" rel="noopener noreferrer">${text}</a></li>`
         )}
         
       </ul>
@@ -66,22 +65,22 @@ class Components {
     </article>
     `;
   ENTITIES_LINK = ({ href, endpoint, icon }) => `
-    <a class="entities-card" href="${href}">
+    <a class="entities-card" href="${href}" rel="noopener noreferrer">
         <button class="btn btn-entity">
         ${icon}
-        ${endpoint !== 'docs' ? endpoint : 'swagger'} 
+        ${endpoint !== "docs" ? endpoint : "swagger"} 
         <span class="entities-card-url"> /${endpoint} </span>       
         </button>        
     </a>
     `;
   EXAMPLES_LINK = ({ href, text }) => `
     <li class="request-card-url doca">
-        <a href="${href}">${text}</a>
+        <a href="${href}" rel="noopener noreferrer">${text}</a>
     </li>
     `;
   DOCUMENTATION_LINK = ({ href, text }) => `
     <li class="request-card-url doca">
-        <a href="${href}">
+        <a href="${href}" rel="noopener noreferrer">
             ${text}
         </a>
     </li>
@@ -274,13 +273,28 @@ class Components {
         </div>        
         `;
   }
+  SUPPORT = () =>
+    `<a href="./customers.html" rel="noopener noreferrer">
+      <button class="btn">
+        <span class="material-icons-round"> free_breakfast </span>
+        <span>поддержать проект...</span>
+      </button>
+    </a>`;
+
   FOOTER() {
     return `
-      <a href="mailto:mail@easyjson.ru?body=привет" class="footer-link">
-        <em>поддержка, донаты: </em>
+      <a href="mailto:mail@wantedjson.ru?body=привет" class="footer-link" rel="noopener noreferrer">
+        <div class='footer-link-tasks'>
+          <p>
+            <strong>поддержка: </strong>
+          </p>
+          <p>
+            <strong>идеи для развития: </strong>
+          </p>          
+        </div>        
         <address>
           <span class="material-icons-round"> mail_outline </span>
-          <span>mail@easy-json.ru</span>
+          <span>mail@wantedjson.ru</span>
         </address>
       </a>
     `;

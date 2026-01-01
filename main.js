@@ -24,6 +24,7 @@ try {
   const ENTITIES = document.querySelector("#entities");
   const EXAMPLES = document.querySelector("#examples ol");
   const DOCUMENTATION = document.querySelector("#documentation ul");
+  const SUPPORT = document.querySelector(".support");
   const FOOTER = document.querySelector(".footer");
 
   // Отрисовка главного меню:
@@ -59,7 +60,10 @@ try {
   // ! Отрисовка навигационной кнопки:
   new UpwardButton({ Component: Components.UPWARD_BTN });
 
-  // !Отрисовка Подвала:
+  // ! Отрисовка кнопки поддержки:
+  draw(SUPPORT, Components.SUPPORT());
+
+  // !Отрисовка Footer:
   draw(FOOTER, Components.FOOTER());
 
   // !Запуск декоратора наблюдателя:
