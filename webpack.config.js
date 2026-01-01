@@ -92,11 +92,11 @@ export default {
   },
   devServer: {
     static: {
-      directory: path.join(path.resolve(), 'src'),
+      directory: path.join(path.resolve(), "src"),
     },
     compress: true,
     port: 3013,
-    allowedHosts: 'all',
+    allowedHosts: "all",
   },
   plugins: [
     new HtmlWebpackPlugin({
@@ -126,5 +126,3 @@ export default {
     extensions: [".js", ".json", ".wasm", ".jsx", ".tsx", ".ts"],
   },
 };
-
-
