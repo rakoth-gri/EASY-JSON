@@ -24,8 +24,9 @@
 
   --app-danger-card-bg: linear-gradient(
     to right top,
-    var(--app-pink-color) 30%,
-    var(--app-danger-color) 75%
+    var(--app-purple-color) 10%,    
+    var(--app-danger-color) 50%,
+    var(--app-pink-color) 90%
   );
 
   --app-sm-spacing: 0.25rem;
